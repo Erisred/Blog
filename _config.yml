@@ -2,7 +2,7 @@ title:              A blog, perhaps
 email:              your-email@example.com
 description:        Ramblings of a deplorable
 author:             Erisred
-baseurl:            "/Blog"
+baseurl:            "/blog"
 url:                "https://erisred.github.io"
 
 # Social Profiles
