@@ -2,11 +2,11 @@ title:              A blog, perhaps
 email:              your-email@example.com
 description:        Ramblings of a deplorable
 author:             Erisred
-baseurl:            "/blog"
+baseurl:            "/Blog"
 url:                "https://erisred.github.io"
 
 # Social Profiles
-twitter_username:   SBootstrap
+twitter_username:   
 github_username:    Erisred
 facebook_username:  
 instagram_username:  
