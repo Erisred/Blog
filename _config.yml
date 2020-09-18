@@ -3,7 +3,7 @@ email:              your-email@example.com
 description:        
 author:             Erisred
 baseurl:            "/blog"
-url:                "https://erisred.github.io"
+url:                "https://erisred.github.io/Blog"
 
 # Social Profiles
 twitter_username:   
