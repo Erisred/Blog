@@ -1,6 +1,6 @@
 title:              A blog, perhaps
 email:              your-email@example.com
-description:        Ramblings of a deplorable
+description:        
 author:             Erisred
 baseurl:            "/blog"
 url:                "https://erisred.github.io"
