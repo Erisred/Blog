@@ -3,4 +3,10 @@ layout: home
 background: '/img/mtErie.jpg'
 imgcaption: Overlooking Lake Campbell and the Pacific ocean<br/> from the summit of Mt Erie - Anacortes, WA
 ---
-I might change this up, and only put one or two posts in, along with some other info I want on the landing page. The rest of the posts should show on the posts page.
+Here's some stuff about me, very basic, because you'll want to see the ABOUT page for a real list of things I can't do very well. On this page, which I'll treat as a landing page, should have links to the blog, about, terms, contact, and maybe a portfolio.
+
+# I'm kind of a big deal
+
+Okay, not really. I'm just filling the page while I decide how to make this thing.
+
+---

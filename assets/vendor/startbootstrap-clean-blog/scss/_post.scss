@@ -1,6 +1,8 @@
 // Styling for the post page
 .post-preview {
+  border-radius: 10px;
   padding: 5px 20px;
+  background: $background-lighter;
   > a {
     color: $text-accent;/*$gray-900;*/
     &:focus,
@@ -42,5 +44,5 @@
   }
 }
 .post-preview:hover {
-  background:$background-lighter;
+  background:$background-primary;
 }
