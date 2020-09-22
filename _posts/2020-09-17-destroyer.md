@@ -4,6 +4,7 @@ title: "This dude is baaad"
 subtitle: ""
 date: 2020-08-30 23:45:13 -0400
 background: '/img/destroyer.jpg'
+preview-img: '/img/crowd.jpg'
 published: true
 categories:
 tags:

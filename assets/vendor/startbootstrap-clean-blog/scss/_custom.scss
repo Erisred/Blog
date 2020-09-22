@@ -9,3 +9,14 @@
 hr {
     background-color:$gray-600;
 }
+
+#mainNav.is-fixed a.navbar-brand,
+#mainNav.is-fixed .navbar-nav > li.nav-item > a {
+    color: #dddddd;
+
+    &:hover {
+        color:#ffffff;
+    }
+}
+#mainNav.is-fixed {border-bottom: 1px solid var(--gray);}
+.post-preview-img {height:120px;width: 200px;position:relative;top:10px;float:right;}

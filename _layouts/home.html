@@ -33,11 +33,14 @@ layout: default
         {{ content }}
 
         <!-- Home Post List -->
-        <h1>Most recent post</h1>
+        <br/><h3>Recent post</h3>
         {% for post in site.posts limit : 1 %}
 
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+            {% if post.preview-img %}
+            <img class="post-preview-img" src="{{ post.preview-img | replace: '/img', 'img' }}">
+            {% endif %}
             <h2 class="post-title">{{ post.title }}</h2>
             {% if post.subtitle %}
             <h3 class="post-subtitle">{{ post.subtitle }}</h3>
