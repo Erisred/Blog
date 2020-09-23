@@ -2,8 +2,8 @@
 layout: post
 title: "I believe every human has a finite number of heartbeats. I don't intend to waste any of mine."
 date: 2020-06-30 23:45:13 -0400
-background: '/img/posts/05.jpg'
-preview-img: '/img/crowd.jpg'
+background: '/img/posts/hiker.jpg'
+preview-img: '/img/posts/hiker.jpg'
 published: true
 categories:
 tags:

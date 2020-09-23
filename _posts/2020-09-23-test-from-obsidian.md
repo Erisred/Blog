@@ -3,8 +3,8 @@ layout: post
 title: "Really cool post title"
 subtitle: "Super awesome subtitle."
 date: 2020-09-23 15:28:40 -0500
-background: '/img/posts/01.jpg'
-preview-img: '/img/crowd.jpg'
+background: '/img/posts/default.jpg'
+preview-img: '/img/posts/default'
 published: true
 categories:
 tags:
