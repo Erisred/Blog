@@ -5,7 +5,7 @@ subtitle: "Super awesome subtitle."
 date: 2020-09-23 15:28:40 -0500
 background: '/img/posts/01.jpg'
 preview-img: '/img/crowd.jpg'
-published: false
+published: true
 categories:
 tags:
 ---
