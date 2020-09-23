@@ -4,7 +4,7 @@ title: "Really cool post title"
 subtitle: "Super awesome subtitle."
 date: 2020-09-23 15:28:40 -0500
 background: '/img/posts/default.jpg'
-preview-img: '/img/posts/default'
+preview-img: '/img/posts/default.jpg'
 published: true
 categories:
 tags:
