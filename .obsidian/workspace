@@ -1,0 +1,90 @@
+{
+  "main": {
+    "id": "44f6786472145062",
+    "type": "split",
+    "children": [
+      {
+        "id": "42e00ea510c9eb8c",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "_posts/2020-09-23-test-from-obsidian.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4f334b4b6d68d3bf",
+    "type": "split",
+    "children": [
+      {
+        "id": "867c644358b925ea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6c9a29e67102a431",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "d11263cdaae369dc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": ""
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "74f8bd19c796c454",
+    "type": "split",
+    "children": [
+      {
+        "id": "edbe0c6ad39bb204",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "989e30844f1f5475",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2020-09-23-test-from-obsidian.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "_posts/2020-09-23-test-from-obsidian.md",
+    "_posts/2020-01-29-prophecy.md",
+    "_posts/2020-01-30-heartbeats.md",
+    "_posts/2020-01-31-man-must-explore.md",
+    "_posts/2020-09-17-destroyer.md",
+    "_posts/2020-01-27-dreams.md",
+    "Untitled.md",
+    "_posts/2020-01-26-dinosaurs.md",
+    "img/bg-post.jpg",
+    "img/bg-index.jpg"
+  ]
+}
