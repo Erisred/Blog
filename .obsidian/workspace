@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_posts/2020-09-23-test-from-obsidian.md",
+            "file": "_posts/2020-09-23-next-test-post.md",
             "mode": "source"
           }
         }
@@ -64,7 +64,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2020-09-23-test-from-obsidian.md"
+                "file": "_posts/2020-09-23-next-test-post.md"
               }
             }
           }
@@ -76,15 +76,10 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "_posts/2020-09-23-next-test-post.md",
     "_posts/2020-09-23-test-from-obsidian.md",
+    "_posts/Untitled.md",
     "_posts/2020-09-17-destroyer.md",
-    "_posts/2020-01-31-man-must-explore.md",
-    "_posts/2020-01-30-heartbeats.md",
-    "_posts/2020-01-29-prophecy.md",
-    "_posts/2020-01-28-exploration.md",
-    "_posts/2020-01-27-dreams.md",
-    "_posts/2020-01-26-dinosaurs.md",
-    "img/pages/about.jpg",
-    "img/posts/04.jpg"
+    "_posts/2020-01-31-man-must-explore.md"
   ]
 }
