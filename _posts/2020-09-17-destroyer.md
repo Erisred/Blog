@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "This dude is baaad"
-subtitle: ""
+subtitle: "There was no subtitle here"
 date: 2020-08-30 23:45:13 -0400
 background: '/img/posts/destroyer.jpg'
 preview-img: '/img/posts/destroyer.jpg'
