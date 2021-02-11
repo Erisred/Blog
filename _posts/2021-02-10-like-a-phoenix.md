@@ -9,7 +9,7 @@ published: true
 categories:
 tags:
 ---
-# I *said* I was done with this
+# I said I was done with this
 Now, I'm thinking about using this for documenting my use of plaintext. Inspired by another site.
 
 Meantime, this is just for fun.
