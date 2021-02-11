@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-img
 title: "This dude is baaad"
 subtitle: "There was no subtitle here"
 date: 2020-08-30 23:45:13 -0400

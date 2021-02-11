@@ -3,31 +3,36 @@ layout: default
 ---
 
 <!-- Page Header -->
-<header class="postHeader">
+{% if page.background %}
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  {% else %}
+  <header class="masthead">
+    {% endif %}
+    <div class="overlay"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-                <h1>{{page.title}}</h1>
-                {% if page.subtitle %}
-                <h5 class="subheading">{{ page.subtitle }}</h5>
-                {% endif %}
-                <hr>
-            </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>{{ page.title }}</h1>
+            {% if page.subtitle %}
+            <h2 class="subheading">{{ page.subtitle }}</h2>
+            {% endif %}
+            <span class="meta">Posted by
+              <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
+              on {{ page.date | date: '%B %d, %Y %H:%M' }} &middot; {% include read_time.html
+              content=page.content %}
+            </span>
+          </div>
         </div>
+      </div>
     </div>
-</header>
+  </header>
 
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
         {{ content }}
-
-        <span class="meta">Posted by
-        <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-        on {{ page.date | date: '%B %d, %Y %H:%M' }} &middot; {% include read_time.html
-        content=page.content %}
-        </span>
 
         <hr>
 

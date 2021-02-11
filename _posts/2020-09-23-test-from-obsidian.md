@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-img
 title: "Test from Obsidian"
 subtitle: "Super awesome subtitle."
 date: 2020-09-23 15:28:40 -0500

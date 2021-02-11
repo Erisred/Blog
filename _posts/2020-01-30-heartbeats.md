@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-img
 title: "I believe every human has a finite number of heartbeats. I don't intend to waste any of mine."
 date: 2020-06-30 23:45:13 -0400
 background: '/img/posts/hiker.jpg'

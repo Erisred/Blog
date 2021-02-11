@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-img
 title: "Absolute last test post"
 subtitle: "All the kings men are spineless bastards"
 date: 2020-09-28 20:30:02 -0500
