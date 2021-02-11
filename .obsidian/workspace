@@ -10,19 +10,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_posts/2020-09-28-last-test-post.md",
+            "file": "_posts/2021-02-10.md",
             "mode": "source"
-          }
-        }
-      },
-      {
-        "id": "b53ef133d51d5b64",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "_posts/2020-01-31-man-must-explore.md",
-            "mode": "preview"
           }
         }
       }
@@ -60,8 +49,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -81,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2020-09-28-last-test-post.md",
+                "file": "_posts/2021-02-10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,15 +86,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "_posts/2021-02-10.md",
     "_posts/2020-09-28-last-test-post.md",
+    "_posts/Untitled.md",
     "_posts/2020-09-23-test-from-obsidian.md",
     "_posts/2020-09-23-next-test-post.md",
     "_posts/2020-09-17-destroyer.md",
     "_posts/2020-01-31-man-must-explore.md",
     "_posts/2020-01-30-heartbeats.md",
     "_posts/2020-01-29-prophecy.md",
-    "_posts/2020-01-28-exploration.md",
-    "_posts/2020-01-27-dreams.md",
-    "_posts/2020-01-26-dinosaurs.md"
+    "_posts/2020-01-28-exploration.md"
   ]
 }
