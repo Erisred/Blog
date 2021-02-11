@@ -13,3 +13,6 @@ tags:
 Now, I'm thinking about using this for documenting my use of plaintext. Inspired by another site.
 
 Meantime, this is just for fun.
+
+## Headers are pretty sometimes
+Then again, sometimes they are not.
