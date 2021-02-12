@@ -5,12 +5,14 @@ description:
 background: '/img/posts/default.jpg'
 ---
 <h1>Tags used on this site</h1>
-
+<hr/>
 {% for tag in site.tags %}
-  <h3>{{ tag[0] }}</h3>
+  <h3><a href="{{ site.url }}/Blog/tag/{{ tag[0] }}" style="color:#bbbbbb;">{{ tag[0] }}</a></h3>
   <ul>
     {% for post in tag[1] %}
       <li><a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 {% endfor %}
+
+{% include tagArchive.html %}
