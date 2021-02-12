@@ -26,6 +26,10 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
+  {% if site.tags != "" %}
+    {% include collecttags.html %}
+  {% endif %}
+
   <style><!-- this is for testing, move all verified code to the custom.scss file -->
 
   </style>

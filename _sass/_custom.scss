@@ -10,8 +10,8 @@ hr {
     background-color:$gray-600;
 }
 
-#mainNav.is-fixed a.navbar-brand,
-#mainNav.is-fixed .navbar-nav > li.nav-item > a {
+#mainNav.is-fixed a.navbar-brand, #mainNav a.navbar-brand, #mainNav .navbar-nav > li.nav-item > a,
+#mainNav.is-fixed .navbar-nav > li.nav-item > a, #mainNav .navbar-toggler {
     color: #dddddd;
 
     &:hover {
