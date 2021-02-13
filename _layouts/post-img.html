@@ -39,7 +39,7 @@ layout: default
         <span>[
           {% for tag in page.tags %}
             {% capture tag_name %}{{ tag }}{% endcapture %}
-            <a href="{{ site.url }}/tag/{{ tag_name }}" class="tagLinkPost"><nobr>{{ tag_name }}</nobr></a>
+            <a href="{{ site.url }}/tag/{{ tag_name }}"><nobr>{{ tag_name }}</nobr></a>
           {% endfor %}
         ]</span>
 
