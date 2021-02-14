@@ -17,11 +17,6 @@ layout: default
             {% if page.subtitle %}
             <h2 class="subheading">{{ page.subtitle }}</h2>
             {% endif %}
-            <span class="meta">Posted by
-              <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-              on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
-              content=page.content %}
-            </span>
           </div>
         </div>
       </div>
@@ -31,17 +26,11 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
+        {% include post_blurb.html %}<br/>
 
         {{ content }}
 
-        <hr>
-
-        <span>#
-          {% for tag in page.tags %}
-            {% capture tag_name %}{{ tag }}{% endcapture %}
-            <a href="{{ site.url }}/tag/{{ tag_name }}"class="postTags"><nobr>{{ tag_name }}</nobr></a>
-          {% endfor %}
-        </span>
+        {% include tagline.html %}
 
         <hr>
 
