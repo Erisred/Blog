@@ -6,7 +6,7 @@ date: 2020-01-28 23:45:13 -0400
 background: '/img/posts/astronaut.jpg'
 preview-img: '/img/posts/astronaut.jpg'
 published: true
-categories:
+categories: setup
 tags: test dream
 ---
 

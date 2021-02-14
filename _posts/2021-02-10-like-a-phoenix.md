@@ -5,7 +5,7 @@ subtitle: "Risen from the ashes"
 date: 2021-02-10 19:30:02 -0500
 preview-img: '/img/posts/default.jpg'
 published: true
-categories:
+categories: setup
 tags: test
 ---
 # I said I was done with this

@@ -6,8 +6,8 @@ date: 2020-09-24 19:59:00 -5:00
 background: '/img/posts/default.jpg'
 preview-img: '/img/posts/default.jpg'
 published: true
-categories:
-tags:
+categories: setup
+tags: test
 ---
 Here's one more
 

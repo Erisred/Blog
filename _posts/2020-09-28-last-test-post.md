@@ -6,8 +6,8 @@ date: 2020-09-28 20:30:02 -0500
 background: '/img/posts/default.jpg'
 preview-img: '/img/posts/default.jpg'
 published: true
-categories:
-tags:
+categories: setup
+tags: test
 ---
 <!-- don't forget to remove the published: false flag when ready to publish! -->
 Sometimes I think Humpty might have been better off staying broken.

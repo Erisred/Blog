@@ -6,8 +6,8 @@ date: 2020-08-30 23:45:13 -0400
 background: '/img/posts/destroyer.jpg'
 preview-img: '/img/posts/destroyer.jpg'
 published: true
-categories:
-tags:
+categories: setup
+tags: test
 ---
 This is a friggin destroyer, yo!
 
