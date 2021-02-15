@@ -1,0 +1,6 @@
+<span>Categories:
+    {% for category in page.categories %}
+      {% capture category_name %}{{ category }}{% endcapture %}
+      <a href="{{ site.baseurl }}/category/{{ category_name }}"class="postCategories"><nobr>{{ category_name }}</nobr></a>&nbsp;
+    {% endfor %}
+</span>

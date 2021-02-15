@@ -30,6 +30,10 @@
     {% include collecttags.html %}
   {% endif %}
 
+  {% if site.categories != "" %}
+    {% include collectcategories.html %}
+  {% endif %}
+
   <style><!-- this is for testing, move all verified code to the custom.scss file -->
 
   </style>

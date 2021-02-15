@@ -7,7 +7,7 @@ background: '/img/posts/default.jpg'
 preview-img: '/img/posts/default.jpg'
 published: true
 categories: setup
-tags: test
+tags: [test, dino]
 ---
 <!-- don't forget to remove the published: false flag when ready to publish! -->
 This is a test blog post that I entered from an Obsidian instance. Let's see how it goes.

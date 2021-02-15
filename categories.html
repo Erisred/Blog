@@ -4,22 +4,15 @@ title: Site categories
 description: 
 background: '/img/posts/default.jpg'
 ---
-<h1>Categories on this site</h1>
+<h1>Categories used on this site</h1>
+<br>
+{% include categoryArchive.html %}
 <hr/>
-<div id="archives">
 {% for category in site.categories %}
-  <div class="archive-group">
-    {% capture category_name %}{{ category | first }}{% endcapture %}
-    <div id="#{{ category_name | slugize }}"></div>
-    <p></p>
-
-    <h3 class="category-head">{{ category_name }}</h3>
-    <a name="{{ category_name | slugize }}"></a>
-    {% for post in site.categories[category_name] %}
-    <article class="archive-item">
-      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
-    </article>
+  <h3><a href="{{ site.url }}/Blog/category/{{ category[0] }}" style="color: #bbbbbb;">{{category[0] }}</a></h3>
+  <ul>
+    {% for post in category[1] %}
+    <li><a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a></li>
     {% endfor %}
-  </div>
+  </ul>
 {% endfor %}
-</div>
