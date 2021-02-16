@@ -1,0 +1,56 @@
+I"�<h2 id="add-categories-to-the-posts">Add categories to the posts</h2>
+<p>Categories and tags are basically the same thing, just by different names. They are gathered, handled, and called using the same methods. The below (tested) code was adapted from the <a href="Jekyll%20tag%20page.md">Jekyll tag page</a> - in fact, the only real change here is that I changed <code class="language-plaintext highlighter-rouge">tag</code> for <code class="language-plaintext highlighter-rouge">category</code> and <code class="language-plaintext highlighter-rouge">tags</code> for <code class="language-plaintext highlighter-rouge">categories</code>. It otherwise remains virtually untouched.</p>
+
+<p>Add categories to the post(s) by including them in the post’s frontmatter. One category can be added using <code class="language-plaintext highlighter-rouge">category:</code> or multiple using <code class="language-plaintext highlighter-rouge">categories:</code>^[I use ‘tags’ all the time, since it works for singular and plural categories both. If I never use the singular, I don’t have to remember to change it] . Separate each category with a single space. It is recommended to use lowercase letters in category names only, and a single word only. If a two-word category is necessary, be sure to put the categories in quotations.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">categories: single category new</code> - three categories named, “single” and “category” and “new”</li>
+  <li><code class="language-plaintext highlighter-rouge">categories: ["single category", new]</code> - two categories named, “single category” and “new” - anything non-standard (single words separated by a single space) needs to be shown as an array: in square brackets, and comma-separated.</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title: The best blog post title
+subtitle: An even better subtitle
+date: 2021-02-15 08:24:38 -0500
+tags: [tag1, tag2, tag3]
+categories: [cat1, cat2, cat3]
+---
+</code></pre></div></div>
+
+<h2 id="build-the-list-of-tags">Build the list of tags</h2>
+<p>Now we need to create the list of categories on the site:
+Add a file to the <code class="language-plaintext highlighter-rouge">_includes</code> folder called <code class="language-plaintext highlighter-rouge">collectcategories.html</code> with the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+{% assign rawcategories = "" %}
+{% for post in site.posts %}
+  {% assign tcategories = post.categories | join:'|' | append:'|' %}
+  {% assign rawcategories = rawcategories | append:tcategories %}
+{% endfor %}
+{% assign rawcategories = rawcategories | split:'|' | sort %}
+
+{% assign site.categories = "" %}
+{% for tag in rawcategories %}
+  {% if category != "" %}
+    {% if categories == "" %}
+      {% assign categories = category | split:'|' %}
+    {% endif %}
+    {% unless categories contains category %}
+      {% assign categories = categories | join:'|' | append:'|' | append:category | split:'|' %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
+</code></pre></div></div>
+
+<p>This creates a list called <code class="language-plaintext highlighter-rouge">site.categories</code></p>
+
+<p>Now we need to ‘execute’ the building of the list. Since it needs to happen <em>before</em> we can use the list, include it in the head.html file (inside the head section).^[This insures the list will be built when the page is loaded]</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+{% if site.categories != "" %}
+  {% include collectcategories.html %}
+{% endif %}
+
+</code></pre></div></div>
+:ET
