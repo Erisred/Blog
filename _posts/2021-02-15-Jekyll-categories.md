@@ -4,12 +4,12 @@ title: "Jekyll categories"
 subtitle: "Using the categories on your Jekyll site"
 date: 2021-02-15 21:34:07 -0500
 preview-img: '/img/posts/default.jpg'
-published: true
+published: false
 categories:
 tags: test
 ---
 ## Add categories to the posts
-Categories and tags are basically the same thing, just by different names. They are gathered, handled, and called using the same methods. The below (tested) code was adapted from the [Jekyll tag page](2021-02-15-Jekyll-tags.md) - in fact, the only real change here is that I changed `tag` for `category` and `tags` for `categories`. It otherwise remains virtually untouched.
+Categories and tags are basically the same thing, just by different names. They are gathered, handled, and called using the same methods. The below (tested) code was adapted from the [Jekyll tag page](2021-02-15-Jekyll-tags) - in fact, the only real change here is that I changed `tag` for `category` and `tags` for `categories`. It otherwise remains virtually untouched.
 
 Add categories to the post(s) by including them in the post's frontmatter. One category can be added using `category:` or multiple using `categories:`[^1] . Separate each category with a single space. It is recommended to use lowercase letters in category names only, and a single word only. If a two-word category is necessary, be sure to put the categories in quotations.
 - `categories: single category new` - three categories named, "single" and "category" and "new"
