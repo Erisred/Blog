@@ -1,13 +1,10 @@
-I"�=<h2 id="add-categories-to-the-posts">Add categories to the posts</h2>
-<p>Categories and tags are basically the same thing, just by different names. They are gathered, handled, and called using the same methods. The below (tested) code was adapted from the <a href="Jekyll%20tag%20page.md">Jekyll tag page</a> - in fact, the only real change here is that I changed <code class="language-plaintext highlighter-rouge">tag</code> for <code class="language-plaintext highlighter-rouge">category</code> and <code class="language-plaintext highlighter-rouge">tags</code> for <code class="language-plaintext highlighter-rouge">categories</code>. It otherwise remains virtually untouched.</p>
+I"AA<h2 id="add-categories-to-the-posts">Add categories to the posts</h2>
+<p>Categories and tags are basically the same thing, just by different names. They are gathered, handled, and called using the same methods. The below (tested) code was adapted from the <a href="2021-02-15-Jekyll-tags">Jekyll tag page</a> - in fact, the only real change here is that I changed <code class="language-plaintext highlighter-rouge">tag</code> for <code class="language-plaintext highlighter-rouge">category</code> and <code class="language-plaintext highlighter-rouge">tags</code> for <code class="language-plaintext highlighter-rouge">categories</code>. It otherwise remains virtually untouched.</p>
 
-<p>Add categories to the post(s) by including them in the post’s frontmatter. One category can be added using <code class="language-plaintext highlighter-rouge">category:</code> or multiple using <code class="language-plaintext highlighter-rouge">categories:</code>^[1] . Separate each category with a single space. It is recommended to use lowercase letters in category names only, and a single word only. If a two-word category is necessary, be sure to put the categories in quotations.</p>
+<p>Add categories to the post(s) by including them in the post’s frontmatter. One category can be added using <code class="language-plaintext highlighter-rouge">category:</code> or multiple using <code class="language-plaintext highlighter-rouge">categories:</code><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> . Separate each category with a single space. It is recommended to use lowercase letters in category names only, and a single word only. If a two-word category is necessary, be sure to put the categories in quotations.</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">categories: single category new</code> - three categories named, “single” and “category” and “new”</li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">categories: ["single category", new]</code> - two categories named, “single category” and “new” - anything non-standard (single words separated by a single space) needs to be shown as an array: in square brackets, and comma-separated.</p>
-  </li>
-  <li>^1:[I use ‘tags’ all the time, since it works for singular and plural categories both. If I never use the singular, I don’t have to remember to change it]</li>
+  <li><code class="language-plaintext highlighter-rouge">categories: ["single category", new]</code> - two categories named, “single category” and “new” - anything non-standard (single words separated by a single space) needs to be shown as an array: in square brackets, and comma-separated.</li>
 </ul>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
@@ -48,7 +45,7 @@ Add a file to the <code class="language-plaintext highlighter-rouge">_includes</
 
 <p>This creates a list called <code class="language-plaintext highlighter-rouge">site.categories</code></p>
 
-<p>Now we need to ‘execute’ the building of the list. Since it needs to happen <em>before</em> we can use the list, include it in the head.html file (inside the head section).^[This insures the list will be built when the page is loaded]</p>
+<p>Now we need to ‘execute’ the building of the list. Since it needs to happen <em>before</em> we can use the list, include it in the head.html file (inside the head section).<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup></p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 {% if site.categories != "" %}
@@ -78,7 +75,7 @@ Add a file to the <code class="language-plaintext highlighter-rouge">_includes</
 <p>Note: the links will be displayed identical to the rest of the links on the site. The class <code class="language-plaintext highlighter-rouge">postCategories</code> can be altered to style these links as desired.</p>
 
 <h2 id="make-the-pages-for-category-posts">Make the pages for category posts</h2>
-<p>We need to create the pages these links point to. These need to be done manually each time a category is added. There are automatic scripts for this, but they require a little bit of programming skill.^[I don’t have that skill, but <a href="https://github.com/qian256/qian256.github.io/blob/master/tag_generator.py">here</a> is one example - there are many online]</p>
+<p>We need to create the pages these links point to. These need to be done manually each time a category is added. There are automatic scripts for this, but they require a little bit of programming skill.<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup></p>
 
 <p>First, create the layout for each category page. In the _layouts folder, create categorypage.html with the following content:</p>
 
@@ -178,7 +175,23 @@ title: Site categories
 
 </code></pre></div></div>
 
-<p>Place it in a page or post^[I put this at the top or bottom of my categories.html page from the previous section]</p>
+<p>Place it in a page or post<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote">4</a></sup></p>
 
 <p><code class="language-plaintext highlighter-rouge">{% include categoryArchive.html %}</code></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>I use ‘tags’ all the time, since it works for singular and plural categories both. If I never use the singular, I don’t have to remember to change it <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>This insures the list will be built when the page is loaded <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>I don’t have that skill, but <a href="https://github.com/qian256/qian256.github.io/blob/master/tag_generator.py">here</a> is one example - there are many online <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>I put this at the top or bottom of my categories.html page from the previous section <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 :ET

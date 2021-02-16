@@ -7,5 +7,5 @@
 {% for tempcategory in sortedtempcategories %}
   {% assign categoryitems = tempcategory | split: '#' %}
   {% capture categoryname %}{{ categoryitems[1] }}{% endcapture %}
-  <a href="{{ siteurl | prepend:site.baseurl }}/category/{{ categoryname }}" class="postTags"><nobr>{{ categoryname }}</nobr></a>&nbsp;
+  <a href="{{ siteurl | prepend:site.baseurl }}/category/{{ categoryname }}" class="postCategories"><nobr>{{ categoryname }}</nobr></a>&nbsp;
 {% endfor %}
