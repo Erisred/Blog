@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Jekyll tags"
+subtitle: "Using the tags on your Jekyll site"
+date: 2021-02-15 21:33:04 -0500
+background: '/img/posts/default.jpg'
+preview-img: '/img/posts/default.jpg'
+published: false
+categories: 
+tags:
+---
+<!-- don't forget to remove the published: false flag when ready to publish! -->
+I decided to write this because I found relatively few directions on this when I initially searched for it. That, and I might want to reference them later.
+
