@@ -4,7 +4,7 @@ title: "Jekyll tags"
 subtitle: "Using the tags on your Jekyll site"
 date: 2021-02-15 21:33:04 -0500
 preview-img: '/img/posts/default.jpg'
-published: false
+published: true
 categories: 
 tags:
 ---
@@ -80,6 +80,8 @@ In the \_includes folder, make a file named `tagline.html` with the following co
 {% endraw %}
 ```
 Note that this also makes each displayed tag into a link, at `/tag/tag_name`
+
+Also note the use of `site.baseurl` here. Most tutorials for tags/categories assume the site is located in the user's base repository. Mine is not, so I cannot use the simple `site.url`. The base url needs to be set up in the `config.yml` file. See Jekyll documentation for details.
 
 Put the following in the post template, in the location you wish the tags to be displayed:
 {% raw %}`{% include tagline.html %}`{% endraw %}

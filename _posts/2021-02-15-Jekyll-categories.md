@@ -4,7 +4,7 @@ title: "Jekyll categories"
 subtitle: "Using the categories on your Jekyll site"
 date: 2021-02-15 21:34:07 -0500
 preview-img: '/img/posts/default.jpg'
-published: false
+published: true
 categories:
 tags: test
 ---
@@ -28,7 +28,7 @@ categories: [cat1, cat2, cat3]
 ---
 ```
 
-## Build the list of tags
+## Build the list of categories
 Now we need to create the list of categories on the site:
 Add a file to the `_includes` folder called `collectcategories.html` with the following:
 
@@ -84,6 +84,8 @@ In the \_includes folder, make a file named `categoryline.html` with the followi
 {% endraw %}
 ```
 Note that this also makes each displayed category into a link, at `/category/category_name`
+
+Also note the use of `site.baseurl` here. Most tutorials for tags/categories assume the site is located in the user's base repository. Mine is not, so I cannot use the simple `site.url`. The base url needs to be set up in the `config.yml` file. See Jekyll documentation for details.
 
 Put the following in the post template, in the location you wish the categories to be displayed:
 {% raw %}`{% include categoryline.html %}`{% endraw %}

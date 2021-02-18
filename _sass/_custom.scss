@@ -1,27 +1,10 @@
-.imgcaption {
-    position:absolute;
-    bottom:10px;
-    right: 0px;
-    font-size:12px;
-    color: $text-darker;
-}
+/* ************************************************************************** */
+/* General style tweaks */
+/* ************************************************************************** */
 
-hr {
-    background-color:$gray-600;
-}
-
-#mainNav.is-fixed a.navbar-brand, #mainNav a.navbar-brand, #mainNav .navbar-nav > li.nav-item > a,
-#mainNav.is-fixed .navbar-nav > li.nav-item > a, #mainNav .navbar-toggler {
-    color: #dddddd;
-
-    &:hover {
-        color:#ffffff;
-    }
-}
-#mainNav.is-fixed {border-bottom: 1px solid var(--gray);}
-.post-preview-img {height:120px;width: 200px;position:relative;top:20px;float:right;}
-
-.post-preview h3.post-subtitle {color:$text-primary;}
+header {color: $gray-500;}
+hr {background-color:$gray-600;}
+.meta {font-size: 75%; float:right;} /* need to remember what this was... */
 
 /* There's no top margin on headers. What, really? */
 /* I kept each separate in case someday I want different sizes to have different spacing */
@@ -32,20 +15,75 @@ h4 {margin-top:20px;}
 h5 {margin-top:20px;}
 h6 {margin-top:20px;}
 
+/* footnotes */
+.footnotes {margin-bottom:10px;font-size:75%; font-family: 'Courier New', Courier, monospace;padding-top: 10px;padding-bottom: 10px;background-color: $gray-800;}
+.footnotes p {margin: 5px;}
+.footnotes:before {content:"Footnotes";}
+
+/* code blocks */
+pre.highlight {background-color: $gray-300;padding:12px;border-radius:8px;font-size:80%;}
+
+/* ************************************************************************** */
+/* Navigation menu tweaks */
+/* ************************************************************************** */
+
+/* Navigation menu colors */
+#mainNav.is-fixed a.navbar-brand, #mainNav a.navbar-brand, #mainNav .navbar-nav > li.nav-item > a,
+#mainNav.is-fixed .navbar-nav > li.nav-item > a, #mainNav .navbar-toggler {
+    color: #dddddd;
+
+    &:hover {
+        color:#ffffff;
+    }
+}
+#mainNav.is-fixed {border-bottom: 1px solid var(--gray);}
+
+
+/* ************************************************************************** */
+/* Masthead - titles, subtitles, images, and image attribtions */
+/* ************************************************************************** */
+
+/* The overlay opcaity is a little much - the shading of the image */
+header.masthead .overlay {
+    opacity: 0.2;
+}
+
+/* Placing and styling the 'imgcaption' attribute on the masthead photo */
+.imgcaption {
+    position:absolute;
+    bottom:10px;
+    right: 0px;
+    font-size:12px;
+    color: $gray-800;
+}
+.imgcaption a {
+    color: unset;
+    text-decoration: underline;
+}
+
 header.masthead .post-heading .meta {font-size: 75%;}
 .post-preview > .post-meta {font-size: 75%;}
 h3.post-subtitle {font-size: 90%;}
 
+
+/* ************************************************************************** */
+/* post tweaks */
+/* ************************************************************************** */
+
+.post-preview-img {
+    height:120px;
+    width: 200px;
+    position:relative;
+    top:20px;
+    float:right;
+}
 header.postHeader {margin-top:75px;}
-.meta {font-size: 75%; float:right;}
+.post-preview h3.post-subtitle {color:$text-primary;}
 
-
-header {color: $gray-500;}
+/* ************************************************************************** */
+/* Tags and categories */
+/* ************************************************************************** */
 
 .postTags {font-size:80%; padding: 0px 4px; /*border:1px solid $gray-700; border-radius:10px;*/font-family: 'Courier New', Courier, monospace;}
 .postCategories {}
 .tagline {float: right;}
-.footnotes {margin-bottom:10px;font-size:75%; font-family: 'Courier New', Courier, monospace;padding-top: 10px;padding-bottom: 10px;background-color: $gray-800;}
-.footnotes p {margin: 5px;}
-.footnotes:before {content:"Footnotes";}
-pre.highlight {background-color: $gray-300;padding:12px;border-radius:8px;font-size:80%;}
