@@ -1,6 +1,6 @@
-<span class="tagline">
+<span class="tagline postTags">tagged with:
   {% for tag in page.tags %}
     {% capture tag_name %}{{ tag }}{% endcapture %}
-    <a href="{{ site.baseurl }}/tag/{{ tag_name }}"class="postTags"><nobr>{{ tag_name }}</nobr></a>&nbsp;
+    <a href="{{ site.baseurl }}/tag/{{ tag_name }}"class=""><nobr>{{ tag_name }}</nobr></a>&nbsp;
   {% endfor %}
 </span>

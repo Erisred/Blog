@@ -4,7 +4,7 @@
 
 header {color: $gray-500;}
 hr {background-color:$gray-600;}
-.meta {font-size: 75%; float:right;} /* need to remember what this was... */
+.meta {font-size: 75%;color:#dddddd;} /* the posted by... blurb */
 
 /* There's no top margin on headers. What, really? */
 /* I kept each separate in case someday I want different sizes to have different spacing */
@@ -21,7 +21,25 @@ h6 {margin-top:20px;}
 .footnotes:before {content:"Footnotes";}
 
 /* code blocks */
-pre.highlight {background-color: $gray-300;padding:12px;border-radius:8px;font-size:80%;}
+pre.highlight {
+    background-color: $gray-300;
+    padding: 0px 12px;
+    border-radius:8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:80%;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    tab-width: 4;
+}
+
+.highlighter-rouge {
+    font-family: 'Courier New', Courier, monospace;
+    font-size:85%;
+    background-color:#454545;
+    color:white;
+    padding:1px 4px;
+    border-radius:7px;
+}
 
 /* ************************************************************************** */
 /* Navigation menu tweaks */
@@ -85,5 +103,6 @@ header.postHeader {margin-top:75px;}
 /* ************************************************************************** */
 
 .postTags {font-size:80%; padding: 0px 4px; /*border:1px solid $gray-700; border-radius:10px;*/font-family: 'Courier New', Courier, monospace;}
-.postCategories {}
+.postCategories {font-size:80%; padding: 0px 4px; /*border:1px solid $gray-700; border-radius:10px;*/font-family: 'Courier New', Courier, monospace;}
 .tagline {float: right;}
+.categoryline {}

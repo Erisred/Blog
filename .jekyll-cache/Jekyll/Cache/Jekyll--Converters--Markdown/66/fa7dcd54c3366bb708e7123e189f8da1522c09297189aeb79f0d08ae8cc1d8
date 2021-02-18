@@ -1,5 +1,5 @@
-I"C<h2 id="add-categories-to-the-posts">Add categories to the posts</h2>
-<p>Categories and tags are basically the same thing, just by different names. They are gathered, handled, and called using the same methods. The below (tested) code was adapted from the <a href="2021-02-15-Jekyll-tags">Jekyll tag page</a> - in fact, the only real change here is that I changed <code class="language-plaintext highlighter-rouge">tag</code> for <code class="language-plaintext highlighter-rouge">category</code> and <code class="language-plaintext highlighter-rouge">tags</code> for <code class="language-plaintext highlighter-rouge">categories</code>. It otherwise remains virtually untouched.</p>
+I"C<h2 id="add-categories-to-the-posts">Add categories to the posts</h2>
+<p>Categories and tags are basically the same thing, just by different names. They are gathered, handled, and called using the same methods. The below (tested) code was adapted from the <a href="/Jekyll-tags">Jekyll tag page</a> - in fact, the only real change here is that I changed <code class="language-plaintext highlighter-rouge">tag</code> for <code class="language-plaintext highlighter-rouge">category</code> and <code class="language-plaintext highlighter-rouge">tags</code> for <code class="language-plaintext highlighter-rouge">categories</code>. It otherwise remains virtually untouched.</p>
 
 <p>Add categories to the post(s) by including them in the post’s frontmatter. One category can be added using <code class="language-plaintext highlighter-rouge">category:</code> or multiple using <code class="language-plaintext highlighter-rouge">categories:</code><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> . Separate each category with a single space. It is recommended to use lowercase letters in category names only, and a single word only. If a two-word category is necessary, be sure to put the categories in quotations.</p>
 <ul>
@@ -67,8 +67,9 @@ Add a file to the <code class="language-plaintext highlighter-rouge">_includes</
 <span class="o">&lt;</span><span class="sr">/span</span><span class="err">&gt;
 </span>
 </code></pre></div></div>
-<p>Note that this also makes each displayed category into a link, at <code class="language-plaintext highlighter-rouge">/category/category_name</code>
-Also note the use of <code class="language-plaintext highlighter-rouge">site.baseurl</code> here. Most tutorials for tags/categories assume the site is located in the user’s base repository. Mine is not, so I cannot use the simple <code class="language-plaintext highlighter-rouge">site.url</code>. The base url needs to be set up in the <code class="language-plaintext highlighter-rouge">config.yml</code> file. See Jekyll documentation for details.</p>
+<p>Note that this also makes each displayed category into a link, at <code class="language-plaintext highlighter-rouge">/category/category_name</code></p>
+
+<p>Also note the use of <code class="language-plaintext highlighter-rouge">site.baseurl</code> here. Most tutorials for tags/categories assume the site is located in the user’s base repository. Mine is not, so I cannot use the simple <code class="language-plaintext highlighter-rouge">site.url</code>. The base url needs to be set up in the <code class="language-plaintext highlighter-rouge">config.yml</code> file. See Jekyll documentation for details.</p>
 
 <p>Put the following in the post template, in the location you wish the categories to be displayed:
 <code class="language-plaintext highlighter-rouge">{% include categoryline.html %}</code></p>

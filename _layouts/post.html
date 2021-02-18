@@ -6,11 +6,12 @@ layout: default
 <header class="postHeader">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-                <h1>{{page.title}}</h1>
+            <div class="col-lg-8 col-md-10 mx-auto text-center">
+              <h1><span class="fa fa-drafting-compass" style="padding-right: 20px;"></span>{{page.title}}</h1>
                 {% if page.subtitle %}
                 <h5 class="subheading">{{ page.subtitle }}</h5>
                 {% endif %}
+                {% include post_blurb.html %}
                 <hr>
             </div>
         </div>
@@ -20,7 +21,6 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        {% include post_blurb.html %}<br/>
         {% include tagline.html %}
         <br>
         {{ content }}

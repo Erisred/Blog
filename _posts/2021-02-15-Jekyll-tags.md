@@ -6,7 +6,7 @@ date: 2021-02-15 21:33:04 -0500
 preview-img: '/img/posts/default.jpg'
 published: true
 categories: 
-tags:
+tags: jekyll
 ---
 I decided to write this because I found relatively few directions on this when I initially searched for it. That, and I might want to reference them later.
 
