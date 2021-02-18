@@ -7,7 +7,7 @@ background: '/img/posts/default.jpg'
 <h1>Tags used on this site</h1>
 <br>
 {% include tagArchive.html %}
-<hr/>
+<hr>
 {% for tag in site.tags %}
   <h3><a href="{{ site.url }}/Blog/tag/{{ tag[0] }}" style="color:#bbbbbb;">{{ tag[0] }}</a></h3>
   <ul>

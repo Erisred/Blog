@@ -2,8 +2,13 @@
 /* General style tweaks */
 /* ************************************************************************** */
 
+a, h2.post-title {color:#a5b6c0;}
+a:hover, h2.post-title:hover {color:rgb(136,158,170);}
+/*a:hover, h2.post-title:hover {color:#a5b6c0;}
+a, h2.post-title {color:rgb(136,158,170);}*/
 header {color: $gray-500;}
-hr {background-color:$gray-600;}
+hr {background-color: $gray-600;}
+hr.red {background-color:#c63939;}
 .meta {font-size: 75%;color:#dddddd;} /* the posted by... blurb */
 
 /* There's no top margin on headers. What, really? */
@@ -83,6 +88,12 @@ header.masthead .post-heading .meta {font-size: 75%;}
 .post-preview > .post-meta {font-size: 75%;}
 h3.post-subtitle {font-size: 90%;}
 
+img.post-preview-img {
+    height: 100px;
+    max-width: 200px;
+    top:6px;
+}
+
 
 /* ************************************************************************** */
 /* post tweaks */
@@ -95,14 +106,18 @@ h3.post-subtitle {font-size: 90%;}
     top:20px;
     float:right;
 }
-header.postHeader {margin-top:75px;}
+header.postHeader {margin-top:75px;color:#dddddd;}
 .post-preview h3.post-subtitle {color:$text-primary;}
+
+.post-preview {background-color: transparent; border-top: 1px solid $gray-500;border-radius: 0;margin-top: 10px;}
+.post-preview h2.post-title {font-size: 22px; margin-top: 10px;}
+p.post-meta {margin-bottom:0px;}
 
 /* ************************************************************************** */
 /* Tags and categories */
 /* ************************************************************************** */
 
-.postTags {font-size:80%; padding: 0px 4px; /*border:1px solid $gray-700; border-radius:10px;*/font-family: 'Courier New', Courier, monospace;}
 .postCategories {font-size:80%; padding: 0px 4px; /*border:1px solid $gray-700; border-radius:10px;*/font-family: 'Courier New', Courier, monospace;}
-.tagline {float: right;}
-.categoryline {}
+.postTags {font-size:80%; padding: 0px 4px; /*border:1px solid $gray-700; border-radius:10px;*/font-family: 'Courier New', Courier, monospace;}
+.categoryline {float: right;}
+.tagline {}
