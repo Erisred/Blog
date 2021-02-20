@@ -3,7 +3,9 @@
 /* ************************************************************************** */
 
 a, h2.post-title {color:#a5b6c0;}
-a:hover, h2.post-title:hover {color:rgb(136,158,170);}
+a:hover, h2.post-title:hover, a:active, a:focus {color:rgb(136,158,170);}
+p a:any-link {text-decoration: none;}
+p a:any-link:hover, p a:any-link:active, p a:any-link:focus, a:any-link:hover {text-decoration:none;}
 /*a:hover, h2.post-title:hover {color:#a5b6c0;}
 a, h2.post-title {color:rgb(136,158,170);}*/
 header {color: $gray-500;}
