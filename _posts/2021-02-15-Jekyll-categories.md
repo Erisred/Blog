@@ -1,5 +1,5 @@
 ---
-layout: postcomm
+layout: post
 title: "Jekyll categories"
 subtitle: "Using the categories on your Jekyll site"
 date: 2021-02-15 21:34:07 -0500
