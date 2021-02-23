@@ -4,32 +4,20 @@ note: this is basically defunct as of 2021-02-23
 ---
 
 <!-- Page Header -->
-{% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-  {% else %}
-  <header class="masthead">
-    {% endif %}
-    <div class="overlay"></div>
+<header class="postHeader">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-heading">
-            <h1>{{ page.title }}</h1>
-            {% if page.subtitle %}
-            <h2 class="subheading">{{ page.subtitle }}</h2>
-            {% endif %}
-            {% include post_blurb.html %}
-            {% if page.imgcaption %}
-            <span class="imgcaption">{{ page.imgcaption }}</span>
-            {% endif %}
-            {% if page.imgcaptioninv %}
-            <span class="imgcaptioninv">{{ page.imgcaptioninv }}</span>
-            {% endif %}
-          </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto text-center">
+              <h1><span class="fa fa-drafting-compass" style="padding-right: 20px;"></span>{{page.title}}</h1>
+                {% if page.subtitle %}
+                <h5 class="subheading">{{ page.subtitle }}</h5>
+                {% endif %}
+                {% include post_blurb.html %}
+                <hr>
+            </div>
         </div>
-      </div>
     </div>
-  </header>
+</header>
 
   <div class="container">
     <div class="row">
