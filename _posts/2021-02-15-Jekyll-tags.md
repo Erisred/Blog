@@ -1,5 +1,5 @@
 ---
-layout: postcomm
+layout: post
 title: "Jekyll tags"
 subtitle: "Using the tags on your Jekyll site"
 date: 2021-02-15 21:33:04 -0500
