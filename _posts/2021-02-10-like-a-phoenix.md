@@ -7,7 +7,6 @@ preview-img: '/img/posts/default.jpg'
 published: true
 categories: setup
 tags: test
-comments-on: true
 ---
 # I said I was done with this
 Now, I'm thinking about using this for documenting my use of plaintext. Inspired by another site.

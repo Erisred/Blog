@@ -5,7 +5,7 @@ subtitle: "Using the categories on your Jekyll site"
 date: 2021-02-15 21:34:07 -0500
 preview-img: '/img/posts/default.jpg'
 published: true
-categories:
+categories: 
 tags: jekyll
 ---
 ## Add categories to the posts

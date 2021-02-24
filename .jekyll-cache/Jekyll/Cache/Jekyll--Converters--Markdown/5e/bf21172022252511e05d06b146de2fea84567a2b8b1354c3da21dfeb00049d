@@ -1,0 +1,4 @@
+I"Ÿ<p><button class="btn btn-dark btn-sm" onclick="toggle_visibility('sampleID');">View div by ID</button></p>
+<div id="sampleID" style="display:none;">  
+</div>
+:ET
