@@ -3,17 +3,19 @@ layout: post
 title: "Jekyll tags"
 subtitle: "Using the tags on your Jekyll site"
 date: 2021-02-15 21:33:04 -0500
-preview-img: '/img/posts/default.jpg'
+preview-img: '/img/posts/penandpaper.jpg'
 published: true
-categories: 
+categories: web-design
 tags: jekyll
 ---
 I decided to write this because I found relatively few directions on this when I initially searched for it. That, and I might want to reference them later.
 
 ## Add tags to the posts
-Add tags to the post(s) by including them in the post's frontmatter. One tag can be added using `tag:` or multiple using `tags:`^[I use 'tags' all the time, since it works for singular and plural tags both. If I never use the singular, I don't have to remember to change it] . Separate each tag with a single space. It is recommended to use lowercase letters in tag names only, and a single word only. If a two-word tag is necessary, be sure to put the tags in quotations.
+Add tags to the post(s) by including them in the post's frontmatter. One tag can be added using `tag:` or multiple using `tags:`[^1] . Separate each tag with a single space. It is recommended to use lowercase letters in tag names only, and a single word only. If a two-word tag is necessary, be sure to put the tags in quotations.
 - `tags: single tag new` - three tags named, "single" and "tag" and "new"
 - `tags: ["single tag", new]` - two tags named, "single tag" and "new" - anything non-standard (single words separated by a single space) needs to be shown as an array: in square brackets, and comma-separated.
+
+[^1]:I use 'tags' all the time, since it works for singular and plural tags both. If I never use the singular, I don't have to remember to change it
 
 ```html
 ---
@@ -89,7 +91,9 @@ Put the following in the post template, in the location you wish the tags to be 
 Note: the links will be displayed identical to the rest of the links on the site. The class `postTags` can be altered to style these links as desired.
 
 ## Make the pages for tag posts
-We need to create the pages these links point to. These need to be done manually each time a tag is added. There are automatic scripts for this, but they require a little bit of programming skill.^[I don't have that skill, but [here](https://github.com/qian256/qian256.github.io/blob/master/tag_generator.py) is one example - there are many online]
+We need to create the pages these links point to. These need to be done manually each time a tag is added. There are automatic scripts for this, but they require a little bit of programming skill.[^2]
+
+[^2]:I don't have that skill, but [here](https://github.com/qian256/qian256.github.io/blob/master/tag_generator.py) is one example - there are many online]
 
 First, create the layout for each tag page. In the \_layouts folder, create tagpage.html with the following content:
 

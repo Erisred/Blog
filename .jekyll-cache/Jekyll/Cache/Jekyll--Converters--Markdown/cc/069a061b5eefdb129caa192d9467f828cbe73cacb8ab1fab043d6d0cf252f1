@@ -1,0 +1,3 @@
+I"·<h2 id="add-categories-to-the-posts">Add categories to the posts</h2>
+<p>Categories and tags are basically the same thing, just by different names. They are gathered, handled, and called using the same methods. The below (tested) code was adapted from the <a href="/Blog/2021/02/15/Jekyll-tags.html">Jekyll tag page</a> - in fact, the only real change here is that I changed <code class="language-plaintext highlighter-rouge">tag</code> and <code class="language-plaintext highlighter-rouge">tags</code> for <code class="language-plaintext highlighter-rouge">category</code> and <code class="language-plaintext highlighter-rouge">categories</code>. It otherwise remains virtually untouched.</p>
+:ET

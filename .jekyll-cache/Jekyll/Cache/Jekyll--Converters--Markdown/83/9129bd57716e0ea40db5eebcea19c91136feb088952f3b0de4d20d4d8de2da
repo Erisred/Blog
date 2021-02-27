@@ -1,7 +1,0 @@
-I"<p><button class="btn btn-dark btn-sm" onclick="toggle_visibility('sampleID');">View div by ID</button></p>
-<div id="sampleID" style="display:none;">  
-
-<h3>This is hidden by default, then shown (as a block) when the toggle link/button is pressed.</h3>
-
-</div>
-:ET

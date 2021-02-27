@@ -3,8 +3,8 @@ layout: post
 title: "Toggle visibility"
 subtitle: "Toggle the visibility of a specified DIV using css and JS"
 date: 2021-02-24 14:16:31 -0500
-preview-img: '/img/posts/default.jpg'
-published: false
+preview-img: '/img/posts/sunhide.jpg'
+published: true
 categories: ["web-design"]
 tags: css javascript
 ---

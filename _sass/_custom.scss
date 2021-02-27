@@ -74,17 +74,19 @@ header.masthead .overlay {
 }
 
 /* Placing and styling the 'imgcaption' attribute on the masthead photo */
-.imgcaption {
+.imgcaption, .imgcaptioninv {
     position:absolute;
     bottom:10px;
     right: 0px;
     font-size:12px;
     color: $gray-800;
 }
-.imgcaption a {
+
+.imgcaption a, .imgcaptioninv a {
     color: unset;
     text-decoration: underline;
 }
+.imgcaptioninv {color: $gray-300;}
 
 header.masthead .post-heading .meta {font-size: 75%;}
 .post-preview > .post-meta {font-size: 75%;}

@@ -3,19 +3,19 @@ layout: post
 title: "Jekyll categories"
 subtitle: "Using the categories on your Jekyll site"
 date: 2021-02-15 21:34:07 -0500
-preview-img: '/img/posts/default.jpg'
+preview-img: '/img/posts/penandpaper.jpg'
 published: true
-categories: 
+categories: web-design
 tags: jekyll
 ---
 ## Add categories to the posts
-Categories and tags are basically the same thing, just by different names. They are gathered, handled, and called using the same methods. The below (tested) code was adapted from the [Jekyll tag page](/Blog/2021/02/15/Jekyll-tags.html) - in fact, the only real change here is that I changed `tag` for `category` and `tags` for `categories`. It otherwise remains virtually untouched.
+Categories and tags are basically the same thing, just by different names. They are gathered, handled, and called using the same methods. The below (tested) code was adapted from the [Jekyll tag page](/Blog/2021/02/15/Jekyll-tags.html) - in fact, the only real change here is that I changed `tag` and `tags` for `category` and `categories`. It otherwise remains virtually untouched.
 
 Add categories to the post(s) by including them in the post's frontmatter. One category can be added using `category:` or multiple using `categories:`[^1] . Separate each category with a single space. It is recommended to use lowercase letters in category names only, and a single word only. If a two-word category is necessary, be sure to put the categories in quotations.
 - `categories: single category new` - three categories named, "single" and "category" and "new"
 - `categories: ["single category", new]` - two categories named, "single category" and "new" - anything non-standard (single words separated by a single space) needs to be shown as an array: in square brackets, and comma-separated.
 
-[^1]:I use 'tags' all the time, since it works for singular and plural categories both. If I never use the singular, I don't have to remember to change it
+[^1]:I use 'categories' all the time, since it works for singular and plural categories both. If I never use the singular, I don't have to remember to change it
 
 ```html
 ---
