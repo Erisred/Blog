@@ -3,7 +3,10 @@
 /* ************************************************************************** */
 
 a, h2.post-title {color:#a5b6c0;}
-a:hover, h2.post-title:hover, a:active, a:focus {color:rgb(136,158,170);}
+a, h2.post-title {color:#A3BCCB;}
+a:hover, h2.post-title:hover, a:active, a:focus {color:#889EAA;}
+/*a, h2.post-title {color:#D6923C;}*/
+/*a:hover, h2.post-title:hover, a:active, a:focus {color: #A46F2B;}*/
 p a:any-link {text-decoration: none;}
 p a:any-link:hover, p a:any-link:active, p a:any-link:focus, a:any-link:hover {text-decoration:none;}
 /*a:hover, h2.post-title:hover {color:#a5b6c0;}
@@ -29,8 +32,8 @@ h6 {margin-top:20px;}
 
 /* code blocks */
 pre.highlight {
-    background-color: $gray-300;
-    padding: 0px 12px;
+    background-color: $gray-400;
+    padding: 0px 30px;
     border-radius:8px;
     font-family: 'Courier New', Courier, monospace;
     font-size:80%;
@@ -97,6 +100,17 @@ img.post-preview-img {
     max-width: 200px;
     top:6px;
 }
+
+.post-subtitle {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8em;
+    max-width: 350px;
+    margin-top: 0.5em;
+    padding-left: 1em;
+    border-left: 1px solid $gray-600;
+    color: $gray-400;
+}
+
 
 
 /* ************************************************************************** */

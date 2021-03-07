@@ -72,13 +72,13 @@ In the \_includes folder, make a file named `tagline.html` with the following co
 
 ```js
 {% raw %}
-<span\>Tags:
+<span>Tags:
 	{% for tag in page.tags %}
-		{% capture tag\_name %}{{ tag }}{% endcapture %}
-	<a href\="{{ site.baseurl }}/tag/{{ tag\_name }}"class\="postTags"\><nobr\>
-		{{ tag\_name }}</nobr\></a\>&nbsp;
+		{% capture tag_name %}{{ tag }}{% endcapture %}
+	<a href="{{ site.baseurl }}/tag{{ tag_name }}"class="postTags"><nobr>
+		{{ tag_name }}</nobr></a>&nbsp;
 	{% endfor %}
-</span\>
+</span>
 {% endraw %}
 ```
 Note that this also makes each displayed tag into a link, at `/tag/tag_name`
@@ -198,6 +198,8 @@ Add a file to the \_includes folder called `tagArchive.html` with the following:
 {% endraw %}
 ```
 
-Place it in a page or post^[I put this at the top or bottom of my tags.html page from the previous section]
+Place it in a page or post[^3]
+
+[^3]:I put this at the top or bottom of my tags.html page from the previous section
 
 {% raw %}`{% include tagArchive.html %}`{% endraw %}

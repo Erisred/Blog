@@ -1,7 +1,7 @@
-I"�;<p>I decided to write this because I found relatively few directions on this when I initially searched for it. That, and I might want to reference them later.</p>
+I"\><p>I decided to write this because I found relatively few directions on this when I initially searched for it. That, and I might want to reference them later.</p>
 
 <h2 id="add-tags-to-the-posts">Add tags to the posts</h2>
-<p>Add tags to the post(s) by including them in the post’s frontmatter. One tag can be added using <code class="language-plaintext highlighter-rouge">tag:</code> or multiple using <code class="language-plaintext highlighter-rouge">tags:</code>^[1] . Separate each tag with a single space. It is recommended to use lowercase letters in tag names only, and a single word only. If a two-word tag is necessary, be sure to put the tags in quotations.</p>
+<p>Add tags to the post(s) by including them in the post’s frontmatter. One tag can be added using <code class="language-plaintext highlighter-rouge">tag:</code> or multiple using <code class="language-plaintext highlighter-rouge">tags:</code><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> . Separate each tag with a single space. It is recommended to use lowercase letters in tag names only, and a single word only. If a two-word tag is necessary, be sure to put the tags in quotations.</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">tags: single tag new</code> - three tags named, “single” and “tag” and “new”</li>
   <li><code class="language-plaintext highlighter-rouge">tags: ["single tag", new]</code> - two tags named, “single tag” and “new” - anything non-standard (single words separated by a single space) needs to be shown as an array: in square brackets, and comma-separated.</li>
@@ -58,15 +58,15 @@ Add a file to the <code class="language-plaintext highlighter-rouge">_includes</
 <p>In the _includes folder, make a file named <code class="language-plaintext highlighter-rouge">tagline.html</code> with the following content:</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="o">&lt;</span><span class="nx">span</span><span class="err">\</span><span class="o">&gt;</span><span class="nx">Tags</span><span class="p">:</span>
+<span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;</span><span class="nx">Tags</span><span class="p">:</span>
 	<span class="p">{</span><span class="o">%</span><span class="err"> </span><span class="k">for</span><span class="err"> </span><span class="nx">tag</span><span class="err"> </span><span class="k">in</span><span class="err"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">tags</span><span class="err"> </span><span class="o">%</span><span class="p">}</span>
-		<span class="p">{</span><span class="o">%</span><span class="err"> </span><span class="nx">capture</span><span class="err"> </span><span class="nx">tag</span><span class="err">\</span><span class="nx">_name</span><span class="err"> </span><span class="o">%</span><span class="p">}{{</span><span class="err"> </span><span class="nx">tag</span><span class="err"> </span><span class="p">}}{</span><span class="o">%</span><span class="err"> </span><span class="nx">endcapture</span><span class="err"> </span><span class="o">%</span><span class="p">}</span>
-	<span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="err">\</span><span class="o">=</span><span class="dl">"</span><span class="s2">{{ site.baseurl }}/tag/{{ tag</span><span class="se">\</span><span class="s2">_name }}</span><span class="dl">"</span><span class="kd">class</span><span class="err">\</span><span class="o">=</span><span class="dl">"</span><span class="s2">postTags</span><span class="dl">"</span><span class="err">\</span><span class="o">&gt;&lt;</span><span class="nx">nobr</span><span class="err">\</span><span class="o">&gt;</span>
-		<span class="p">{{</span><span class="err"> </span><span class="nx">tag</span><span class="err">\</span><span class="nx">_name</span><span class="err"> </span><span class="p">}}</span><span class="o">&lt;</span><span class="sr">/nobr</span><span class="se">\&gt;</span><span class="sr">&lt;/</span><span class="nx">a</span><span class="err">\</span><span class="o">&gt;&amp;</span><span class="nx">nbsp</span><span class="p">;</span>
+		<span class="p">{</span><span class="o">%</span><span class="err"> </span><span class="nx">capture</span><span class="err"> </span><span class="nx">tag_name</span><span class="err"> </span><span class="o">%</span><span class="p">}{{</span><span class="err"> </span><span class="nx">tag</span><span class="err"> </span><span class="p">}}{</span><span class="o">%</span><span class="err"> </span><span class="nx">endcapture</span><span class="err"> </span><span class="o">%</span><span class="p">}</span>
+	<span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="dl">"</span><span class="s2">{{ site.baseurl }}/tag{{ tag_name }}</span><span class="dl">"</span><span class="kd">class</span><span class="o">=</span><span class="dl">"</span><span class="s2">postTags</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="nx">nobr</span><span class="o">&gt;</span>
+		<span class="p">{{</span><span class="err"> </span><span class="nx">tag_name</span><span class="err"> </span><span class="p">}}</span><span class="o">&lt;</span><span class="sr">/nobr&gt;&lt;/</span><span class="nx">a</span><span class="o">&gt;&amp;</span><span class="nx">nbsp</span><span class="p">;</span>
 	<span class="p">{</span><span class="o">%</span><span class="err"> </span><span class="nx">endfor</span><span class="err"> </span><span class="o">%</span><span class="p">}</span>
-<span class="o">&lt;</span><span class="sr">/span</span><span class="se">\&gt;</span><span class="err">
-
-</span></code></pre></div></div>
+<span class="o">&lt;</span><span class="sr">/span</span><span class="err">&gt;
+</span>
+</code></pre></div></div>
 <p>Note that this also makes each displayed tag into a link, at <code class="language-plaintext highlighter-rouge">/tag/tag_name</code></p>
 
 <p>Also note the use of <code class="language-plaintext highlighter-rouge">site.baseurl</code> here. Most tutorials for tags/categories assume the site is located in the user’s base repository. Mine is not, so I cannot use the simple <code class="language-plaintext highlighter-rouge">site.url</code>. The base url needs to be set up in the <code class="language-plaintext highlighter-rouge">config.yml</code> file. See Jekyll documentation for details.</p>
@@ -77,7 +77,7 @@ Add a file to the <code class="language-plaintext highlighter-rouge">_includes</
 <p>Note: the links will be displayed identical to the rest of the links on the site. The class <code class="language-plaintext highlighter-rouge">postTags</code> can be altered to style these links as desired.</p>
 
 <h2 id="make-the-pages-for-tag-posts">Make the pages for tag posts</h2>
-<p>We need to create the pages these links point to. These need to be done manually each time a tag is added. There are automatic scripts for this, but they require a little bit of programming skill.^[I don’t have that skill, but <a href="https://github.com/qian256/qian256.github.io/blob/master/tag_generator.py">here</a> is one example - there are many online]</p>
+<p>We need to create the pages these links point to. These need to be done manually each time a tag is added. There are automatic scripts for this, but they require a little bit of programming skill.<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup></p>
 
 <p>First, create the layout for each tag page. In the _layouts folder, create tagpage.html with the following content:</p>
 
@@ -178,7 +178,25 @@ title: Site tags
 
 </code></pre></div></div>
 
+<h1 id="test">Test</h1>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nc">.classname</span> <span class="p">{</span>
+	<span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
 <p>Place it in a page or post^[I put this at the top or bottom of my tags.html page from the previous section]</p>
 
 <p><code class="language-plaintext highlighter-rouge">{% include tagArchive.html %}</code></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>I use ‘tags’ all the time, since it works for singular and plural tags both. If I never use the singular, I don’t have to remember to change it <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>I don’t have that skill, but <a href="https://github.com/qian256/qian256.github.io/blob/master/tag_generator.py">here</a> is one example - there are many online] <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 :ET
