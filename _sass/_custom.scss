@@ -33,7 +33,7 @@ h6 {margin-top:20px;}
 /* code blocks */
 pre.highlight {
     background-color: $gray-400;
-    padding: 0px 30px;
+    padding: 15px 10px;
     border-radius:8px;
     font-family: 'Courier New', Courier, monospace;
     font-size:80%;
@@ -105,7 +105,7 @@ img.post-preview-img {
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.8em;
     max-width: 350px;
-    margin-top: 0.5em;
+    margin: 1.0em 0em;
     padding-left: 1em;
     border-left: 1px solid $gray-600;
     color: $gray-400;
