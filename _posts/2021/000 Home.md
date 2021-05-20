@@ -3,8 +3,8 @@ All roads lead to home. This is your launchpad and homebase. Your personal North
 
 ### Home Maps
 - Inner-led Sense-making
-    - 010 - [[010 Mindsets MOC|Mindsets]]
-	- 020 - [[020 Concepts MOC|Concepts]] — #concept
+    - 010 - [Mindsets](010 Mindsets MOC)
+	- 020 - [Concepts](020 Concepts MOC) — #concept
 	- 030 - [[030 Interests MOC|Interests]] — #MOC
 	- 040 - [[040 Writings MOC|Writings]] — #journal | #writing | #output
 - Outer-led Sense-making
