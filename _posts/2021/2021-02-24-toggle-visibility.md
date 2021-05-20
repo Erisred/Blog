@@ -11,6 +11,9 @@ tags: css javascript
 
 This is really for my own sake, since this can be found with even a cursory Google search...
 
+This next bit is for testing out something different. Ignore this, please.
+[Tagpage](/Blog/tags)
+
 ### Creating a section that can be hidden/shown using a link/button
 *This does require Javascript.*
 
