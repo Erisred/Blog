@@ -1,4 +1,4 @@
-links: [[000 Home|Home]]
+links: [Home](000 Home)
 
 # Mindsets MOC
 *I want to...*
