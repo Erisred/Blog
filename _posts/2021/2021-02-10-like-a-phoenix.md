@@ -13,7 +13,7 @@ Now, I'm thinking about using this for documenting my use of plaintext. Inspired
 
 Meantime, this is just for fun.
 
-[Link to another](Jekyll-categories.md)
+[Link to another](/Blog/2021/02/15/Jekyll-categories.md) 
 
 ## Headers are pretty sometimes
 Then again, sometimes they are not.
