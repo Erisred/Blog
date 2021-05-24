@@ -141,3 +141,44 @@ p.post-meta {margin-bottom:0px;}
 .tagline {}
 
 .comments-section {margin-top: 10px; padding-top: 10px;}
+
+/* ************************ */
+.related-group {
+  margin-left: 10px;
+  width: 90% !important;
+  height: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.related-group:hover {
+  background-color: #ddd;
+}
+
+.related-group a {
+  text-decoration: none;
+}
+
+.related-title {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px !important;
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.related-excerpt:before {
+  content: '"';
+}
+
+.related-excerpt:after {
+  content: '"';
+}
+
+.related-excerpt {
+  color: #555555 !important;
+  padding-left: 10px;
+  padding-right: 5px;
+  font-size: 16px !important;
+}

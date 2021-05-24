@@ -1,0 +1,199 @@
+I"]C<h2 id="add-categories-to-the-posts">Add categories to the posts</h2>
+<p>Categories and tags are basically the same thing, just by different names. They are gathered, handled, and called using the same methods. The below (tested) code was adapted from the <a href="/02/15/Jekyll-tags.html.md">Jekyll tag page</a> <a href="/2021-02-15-Jekyll-tags.md">Jekyll Tag page</a> - in fact, the only real change here is that I changed <code class="language-plaintext highlighter-rouge">tag</code> and <code class="language-plaintext highlighter-rouge">tags</code> for <code class="language-plaintext highlighter-rouge">category</code> and <code class="language-plaintext highlighter-rouge">categories</code>. It otherwise remains virtually untouched.</p>
+
+<p>Add categories to the post(s) by including them in the post’s frontmatter. One category can be added using <code class="language-plaintext highlighter-rouge">category:</code> or multiple using <code class="language-plaintext highlighter-rouge">categories:</code><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> . Separate each category with a single space. It is recommended to use lowercase letters in category names only, and a single word only. If a two-word category is necessary, be sure to put the categories in quotations.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">categories: single category new</code> - three categories named, “single” and “category” and “new”</li>
+  <li><code class="language-plaintext highlighter-rouge">categories: ["single category", new]</code> - two categories named, “single category” and “new” - anything non-standard (single words separated by a single space) needs to be shown as an array: in square brackets, and comma-separated.</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title: The best blog post title
+subtitle: An even better subtitle
+date: 2021-02-15 08:24:38 -0500
+tags: [tag1, tag2, tag3]
+categories: [cat1, cat2, cat3]
+---
+</code></pre></div></div>
+
+<h2 id="build-the-list-of-categories">Build the list of categories</h2>
+<p>Now we need to create the list of categories on the site:
+Add a file to the <code class="language-plaintext highlighter-rouge">_includes</code> folder called <code class="language-plaintext highlighter-rouge">collectcategories.html</code> with the following:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+{% assign rawcategories = "" %}
+{% for post in site.posts %}
+  {% assign tcategories = post.categories | join:'|' | append:'|' %}
+  {% assign rawcategories = rawcategories | append:tcategories %}
+{% endfor %}
+{% assign rawcategories = rawcategories | split:'|' | sort %}
+
+{% assign site.categories = "" %}
+{% for tag in rawcategories %}
+  {% if category != "" %}
+    {% if categories == "" %}
+      {% assign categories = category | split:'|' %}
+    {% endif %}
+    {% unless categories contains category %}
+      {% assign categories = categories | join:'|' | append:'|' | append:category | split:'|' %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
+</code></pre></div></div>
+
+<p>This creates a list called <code class="language-plaintext highlighter-rouge">site.categories</code></p>
+
+<p>Now we need to ‘execute’ the building of the list. Since it needs to happen <em>before</em> we can use the list, include it in the head.html file (inside the head section).<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+{% if site.categories != "" %}
+  {% include collectcategories.html %}
+{% endif %}
+
+</code></pre></div></div>
+
+<h2 id="displaying-categories-on-the-post">Displaying categories on the post</h2>
+<p>In the _includes folder, make a file named <code class="language-plaintext highlighter-rouge">categoryline.html</code> with the following content:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">&lt;</span><span class="nx">span</span><span class="o">&gt;</span><span class="nx">Categories</span><span class="p">:</span>
+	<span class="p">{</span><span class="o">%</span><span class="err"> </span><span class="k">for</span><span class="err"> </span><span class="nx">category</span><span class="err"> </span><span class="k">in</span><span class="err"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">categories</span><span class="err"> </span><span class="o">%</span><span class="p">}</span>
+		<span class="p">{</span><span class="o">%</span><span class="err"> </span><span class="nx">capture</span><span class="err"> </span><span class="nx">category_name</span><span class="err"> </span><span class="o">%</span><span class="p">}{{</span><span class="err"> </span><span class="nx">category</span><span class="err"> </span><span class="p">}}{</span><span class="o">%</span><span class="err"> </span><span class="nx">endcapture</span><span class="err"> </span><span class="o">%</span><span class="p">}</span>
+	<span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="dl">"</span><span class="s2">{{ site.baseurl }}/category/{{ category</span><span class="se">\</span><span class="s2">_name }}</span><span class="dl">"</span><span class="kd">class</span><span class="o">=</span><span class="dl">"</span><span class="s2">postCategories</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="nx">nobr</span><span class="o">&gt;</span>
+		<span class="p">{{</span><span class="err"> </span><span class="nx">category_name</span><span class="err"> </span><span class="p">}}</span><span class="o">&lt;</span><span class="sr">/nobr&gt;&lt;/</span><span class="nx">a</span><span class="o">&gt;&amp;</span><span class="nx">nbsp</span><span class="p">;</span>
+	<span class="p">{</span><span class="o">%</span><span class="err"> </span><span class="nx">endfor</span><span class="err"> </span><span class="o">%</span><span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/span</span><span class="err">&gt;
+</span>
+</code></pre></div></div>
+<p>Note that this also makes each displayed category into a link, at <code class="language-plaintext highlighter-rouge">/category/category_name</code></p>
+
+<p>Also note the use of <code class="language-plaintext highlighter-rouge">site.baseurl</code> here. Most tutorials for tags/categories assume the site is located in the user’s base repository. Mine is not, so I cannot use the simple <code class="language-plaintext highlighter-rouge">site.url</code>. The base url needs to be set up in the <code class="language-plaintext highlighter-rouge">config.yml</code> file. See Jekyll documentation for details.</p>
+
+<p>Put the following in the post template, in the location you wish the categories to be displayed:
+<code class="language-plaintext highlighter-rouge">{% include categoryline.html %}</code></p>
+
+<p>Note: the links will be displayed identical to the rest of the links on the site. The class <code class="language-plaintext highlighter-rouge">postCategories</code> can be altered to style these links as desired.</p>
+
+<h2 id="make-the-pages-for-category-posts">Make the pages for category posts</h2>
+<p>We need to create the pages these links point to. These need to be done manually each time a category is added. There are automatic scripts for this, but they require a little bit of programming skill.<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup></p>
+
+<p>First, create the layout for each category page. In the _layouts folder, create categorypage.html with the following content:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="o">---</span>
+<span class="nx">layout</span><span class="p">:</span><span class="err"> </span><span class="k">default</span>
+<span class="o">---</span>
+
+<span class="o">&lt;</span><span class="nx">header</span> <span class="kd">class</span><span class="o">=</span><span class="dl">"</span><span class="s2">postHeader</span><span class="dl">"</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="nx">div</span> <span class="kd">class</span><span class="o">=</span><span class="dl">"</span><span class="s2">container</span><span class="dl">"</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="nx">div</span> <span class="kd">class</span><span class="o">=</span><span class="dl">"</span><span class="s2">row</span><span class="dl">"</span><span class="o">&gt;</span>
+			<span class="o">&lt;</span><span class="nx">div</span> <span class="kd">class</span><span class="o">=</span><span class="dl">"</span><span class="s2">col-lg-8 col-md-10 mx-auto</span><span class="dl">"</span><span class="o">&gt;</span>
+				<span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Tag</span><span class="p">:</span><span class="err"> </span><span class="p">{{</span><span class="err"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">category</span><span class="err"> </span><span class="p">}}</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>				<span class="p">{{</span><span class="err"> </span><span class="nx">content</span><span class="err"> </span><span class="p">}}</span>
+				<span class="o">&lt;</span><span class="nx">hr</span><span class="o">&gt;</span>
+			<span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>		<span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>	<span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="sr">/header</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="kd">class</span><span class="o">=</span><span class="dl">"</span><span class="s2">container</span><span class="dl">"</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="nx">div</span> <span class="kd">class</span><span class="o">=</span><span class="dl">"</span><span class="s2">row</span><span class="dl">"</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="nx">div</span> <span class="kd">class</span><span class="o">=</span><span class="dl">"</span><span class="s2">col-lg-8 col-md-10 mx-auto</span><span class="dl">"</span><span class="o">&gt;</span>
+			<span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+				<span class="p">{</span><span class="o">%</span><span class="err"> </span><span class="k">for</span><span class="err"> </span><span class="nx">post</span><span class="err"> </span><span class="k">in</span><span class="err"> </span><span class="nx">site</span><span class="p">.</span><span class="nx">categories</span><span class="p">[</span><span class="nx">page</span><span class="p">.</span><span class="nx">category</span><span class="p">]</span><span class="err"> </span><span class="o">%</span><span class="p">}</span>
+					<span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="dl">"</span><span class="s2">{{ post.url | prepend:site.baseurl }}</span><span class="dl">"</span><span class="o">&gt;</span><span class="p">{{</span><span class="err"> </span><span class="nx">post</span><span class="p">.</span><span class="nx">title</span><span class="err"> </span><span class="p">}}</span><span class="o">&lt;</span><span class="sr">/a&gt;{{ post.date | date_to_string }}</span><span class="se">)</span><span class="sr">&lt;br</span><span class="err">&gt;
+</span>						<span class="p">{{</span><span class="err"> </span><span class="nx">post</span><span class="p">.</span><span class="nx">description</span><span class="err"> </span><span class="p">}}</span>
+					<span class="o">&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span>				<span class="p">{</span><span class="o">%</span><span class="err"> </span><span class="nx">endfor</span><span class="err"> </span><span class="o">%</span><span class="p">}</span>
+			<span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span>		<span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>	<span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>
+</code></pre></div></div>
+
+<p>This layout can now be used on each ‘category page’ - that is, each category needs a page to display its contents. Use like so:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+---
+layout: categorypage
+title: "Tag page for CATEGORYNAME"
+tag: CATEGORYNAME
+---
+
+These are posts that are tagged with the **{{ page.category }}** tag.
+
+&lt;!--
+$$ Remove (or do not copy) this and everything below it.
+$$ Replace CATEGORYNAME with the name of the new category in both places of the frontmatter. No other changes are necessary.
+$$ New file name should match the categoryname.md
+\--&gt;
+
+</code></pre></div></div>
+<p>Change the CATEGORYNAME in both places to the tag. Each tag needs its own file, placed in a folder (in the root) named <code class="language-plaintext highlighter-rouge">category</code>. Feel free to change the content as desired.</p>
+
+<h2 id="one-page-that-lists-all-categories-with-a-list-of-their-posts">One page that lists all categories with a list of their posts</h2>
+<p>In the root folder, create a page called <code class="language-plaintext highlighter-rouge">categories.html</code> with the following content:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+---
+layout: page
+title: Site categories
+---
+
+&lt;h1&gt;Categories used on this site&lt;/h1&gt;
+&lt;hr/&gt;
+{% for category in site.categories %}
+	&lt;h3&gt;&lt;a href="{{ site.url }}/Blog/category/{{ category[0] }}" style="color:#bbbbbb;"&gt;{{ category[0] }}&lt;/a&gt;&lt;/h3&gt;
+	&lt;ul&gt;
+		{% for post in category[1] %}
+				&lt;li&gt;&lt;a href="{{ post.url | prepend:site.baseurl }}"&gt;{{ post.title }}
+			&lt;/a&gt;&lt;/li&gt;
+		{% endfor %}
+	&lt;/ul&gt;
+{% endfor %}
+
+</code></pre></div></div>
+
+<h2 id="create-a-list-of-all-categories-on-the-site">Create a list of all categories on the site</h2>
+<p>Create a list of categories used on the site (without the list of associated posts). Each category will link to its categories page.</p>
+
+<p>Add a file to the _includes folder called <code class="language-plaintext highlighter-rouge">categoryArchive.html</code> with the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+{% capture tempcategories %}
+	{% for category in site.categories %}
+		{{ category\[1\].size | plus: 1000 }}#{{ category\[0\] }}#{{ category\[1\].size }}
+	{% endfor %}
+{% endcapture %}
+{% assign sortedtempcategories = tempcategories | split:' ' | sort | reverse %}
+{% for tempcategory in sortedtempcategories %}
+	{% assign categoryitems = tempcategory | split: '#' %}
+	{% capture categoryname %}{{ categoryitems\[1\] }}{% endcapture %}
+	&lt;a href\="{{ siteurl | prepend:site.baseurl }}/category/{{ categoryname }}" class\="postCategories"\&gt;&lt;nobr\&gt;{{ categoryname }}&lt;/nobr\&gt;&lt;/a\&gt;&amp;nbsp;
+{% endfor %}
+
+</code></pre></div></div>
+
+<p>Place it in a page or post<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote">4</a></sup></p>
+
+<p><code class="language-plaintext highlighter-rouge">{% include categoryArchive.html %}</code></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>I use ‘categories’ all the time, since it works for singular and plural categories both. If I never use the singular, I don’t have to remember to change it <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>This insures the list will be built when the page is loaded <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>I don’t have that skill, but <a href="https://github.com/qian256/qian256.github.io/blob/master/tag_generator.py">here</a> is one example - there are many online <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>I put this at the top or bottom of my categories.html page from the previous section <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET
