@@ -6,11 +6,11 @@
       {
         "id": "42e00ea510c9eb8c",
         "type": "leaf",
-        "active": true,
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "screenshot.png"
+            "file": "_posts/2020/2020-01-26-dinosaurs.md",
+            "mode": "source"
           }
         }
       }
@@ -68,10 +68,12 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "screenshot.png",
+                "file": "_posts/2020/2020-01-26-dinosaurs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -84,7 +86,9 @@
     "width": 300,
     "collapsed": true
   },
+  "active": "42e00ea510c9eb8c",
   "lastOpenFiles": [
+    "_posts/2020/2020-01-26-dinosaurs.md",
     "screenshot.png",
     "README.md",
     "img/malitovinv.png",
@@ -93,7 +97,6 @@
     "_posts/2021-02-10-like-a-phoenix.md",
     "_posts/2021-02-10-I-am-a-glutton-for-punishment.md",
     "_posts/Untitled.md",
-    "_posts/2021-02-10.md",
-    "_posts/2020-09-28-last-test-post.md"
+    "_posts/2021-02-10.md"
   ]
 }
