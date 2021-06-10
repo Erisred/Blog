@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_posts/2020/2020-01-26-dinosaurs.md",
+            "file": "_posts/2021/2021-02-24-Convert-RGBA-to-RGB.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2020/2020-01-26-dinosaurs.md",
+                "file": "_posts/2021/2021-02-24-Convert-RGBA-to-RGB.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,8 @@
   },
   "active": "42e00ea510c9eb8c",
   "lastOpenFiles": [
+    "_posts/2021/2021-02-24-toggle-visibility 1.md",
+    "_posts/2021/2021-02-24-toggle-visibility.md",
     "_posts/2020/2020-01-26-dinosaurs.md",
     "screenshot.png",
     "README.md",
@@ -95,8 +97,6 @@
     "_site/screenshot.png",
     "_site/README.md",
     "_posts/2021-02-10-like-a-phoenix.md",
-    "_posts/2021-02-10-I-am-a-glutton-for-punishment.md",
-    "_posts/Untitled.md",
-    "_posts/2021-02-10.md"
+    "_posts/2021-02-10-I-am-a-glutton-for-punishment.md"
   ]
 }
