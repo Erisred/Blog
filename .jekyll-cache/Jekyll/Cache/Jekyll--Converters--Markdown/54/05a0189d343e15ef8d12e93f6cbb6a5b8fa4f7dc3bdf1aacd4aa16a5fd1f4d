@@ -1,4 +1,5 @@
-I"=<p>I recently wanted to create a chart in excel that used colors that had opacity. Unfortunately, Excel only allows hex or RGB colors with no opacity for a cell fill. After some searching, I found the formula to convert an image with a defined opacity into a new color without.</p>
+I"€
+<p>I recently wanted to create a chart in excel that used colors that had opacity. Unfortunately, Excel only allows hex or RGB colors with no opacity for a cell fill. After some searching, I found the formula to convert an image with a defined opacity into a new color without.</p>
 
 <h2 id="the-formula">The formula</h2>
 <p>cr = cf x af + cb x ab x (1 - af)</p>
@@ -43,5 +44,26 @@ Example: <code class="language-plaintext highlighter-rouge">rgba(229,34,55,0.4)<
 <input id="af" name="af" /> Alpha factor to apply  <br />
 <input id="cb" name="cb" /> Background color  <br />
 <input id="ab" name="ab" /> background alpha (usually 1)  <br />
-<input type="button" onclick="function()" value="Run!" /></p>
+<input type="button" onclick="colorVal()" value="Run!" /></p>
+
+<div>
+	<form id="colorForm">
+	<div>
+    	<label id="colorForeground">Orig foreground color</label>
+    	<input id="cf" />&lt;/input&gt;
+		<label id="alphaFactor">Orig foreground color</label>
+    	<input id="af" />&lt;/input&gt;
+		<label id="backgroundValue">Orig foreground color</label>
+    	<input id="cb" />&lt;/input&gt;
+		<label id="backgroundAlpha">Orig foreground color</label>
+    	<input id="ab" />&lt;/input&gt;
+</div>
+<div class="form-sub">
+    <button id="subButton" type="button">Resulting value</button>
+</div>
+</form>
+
+<div>
+    <p id="result"></p></div>
+</div>
 :ET

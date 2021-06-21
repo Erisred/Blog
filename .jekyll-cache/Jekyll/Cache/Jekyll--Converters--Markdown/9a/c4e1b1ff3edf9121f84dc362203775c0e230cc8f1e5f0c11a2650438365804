@@ -1,4 +1,5 @@
-I"R<p>I recently wanted to create a chart in excel that used colors that had opacity. Unfortunately, Excel only allows hex or RGB colors with no opacity for a cell fill. After some searching, I found the formula to convert an image with a defined opacity into a new color without.</p>
+I"€
+<p>I recently wanted to create a chart in excel that used colors that had opacity. Unfortunately, Excel only allows hex or RGB colors with no opacity for a cell fill. After some searching, I found the formula to convert an image with a defined opacity into a new color without.</p>
 
 <h2 id="the-formula">The formula</h2>
 <p>cr = cf x af + cb x ab x (1 - af)</p>
@@ -32,9 +33,8 @@ Example: <code class="language-plaintext highlighter-rouge">rgba(229,34,55,0.4)<
   <li>Add these three to an rgb - <code class="language-plaintext highlighter-rouge">rgb(245,167,175)</code></li>
 </ol>
 
-<p>Examples:</p>
-<div style="height:100px; width:100px; background-color:rgba(229,34,55,0.4);text-align:center;">Original, with opacity</div>
-<p><br />&lt;div style="height:100px; width:100px; background-color:rgb(122,44,47);text-align:center;"&gt;New, no opacity&lt;/div&gt;</p>
+<p>Examples:
+<span style="height:100px; width:100px; background-color:rgba(229,34,55,0.4);text-align:center;">Original, with opacity</span> <span style="height:100px; width:100px; background-color:rgb(122,44,47);text-align:center;">New, no opacity</span></p>
 
 <ul>
   <li><em>note - values changed here due to the dark (non-white) background</em></li>
@@ -44,5 +44,26 @@ Example: <code class="language-plaintext highlighter-rouge">rgba(229,34,55,0.4)<
 <input id="af" name="af" /> Alpha factor to apply  <br />
 <input id="cb" name="cb" /> Background color  <br />
 <input id="ab" name="ab" /> background alpha (usually 1)  <br />
-<input type="button" onclick="function()" value="Run!" /></p>
+<input type="button" onclick="colorVal()" value="Run!" /></p>
+
+<div>
+	<form id="colorForm">
+	<div>
+    	<label id="colorForeground">Orig foreground color</label>
+    	<input id="cf" />&lt;/input&gt;
+		<label id="alphaFactor">Orig foreground color</label>
+    	<input id="af" />&lt;/input&gt;
+		<label id="backgroundValue">Orig foreground color</label>
+    	<input id="cb" />&lt;/input&gt;
+		<label id="backgroundAlpha">Orig foreground color</label>
+    	<input id="ab" />&lt;/input&gt;
+</div>
+<div class="form-sub">
+    <button id="subButton" type="button">Resulting value</button>
+</div>
+</form>
+
+<div>
+    <p id="result"></p></div>
+</div>
 :ET

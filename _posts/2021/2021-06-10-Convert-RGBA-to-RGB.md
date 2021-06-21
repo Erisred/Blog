@@ -38,8 +38,14 @@ Examples:
 
 - *note - values changed here due to the dark (non-white) background*
 
-<input id="cf" name="cf"> Original foreground color <br>
-<input id="af" name="af"> Alpha factor to apply  <br>
-<input id="cb" name="cb"> Background color  <br>
-<input id="ab" name="ab"> background alpha (usually 1)  <br>
-<input type="button" onclick="function()" value="Run!">
+---
+
+## Here's a calculator!
+
+<input class="input" id="cf" name="cf"> Original foreground color <br>
+<input class="input" id="af" name="af"> Alpha factor to apply  <br>
+<input class="input" id="cb" name="cb"> Background color  <br>
+<input class="input" id="ab" name="ab"> background alpha (usually 1)  <br>
+<input type="button" class="btn btn-dark" onclick="colorVal()" value="Run!">
+
+<div id="colorValueAnswer">Value answer</div>
