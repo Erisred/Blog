@@ -1,0 +1,50 @@
+I"Ç<p>I recently wanted to create a chart in excel that used colors that had opacity. Unfortunately, Excel only allows hex or RGB colors with no opacity for a cell fill. After some searching, I found the formula to convert an image with a defined opacity into a new color without.</p>
+
+<h2 id="the-formula">The formula</h2>
+<p>cr = cf x af + cb x ab x (1 - af)</p>
+
+<p>Where:</p>
+<ul>
+  <li>cr = the resulting color</li>
+  <li>cf = foreground color (The original color value) <input id="cf" name="cf" /></li>
+  <li>af = foreground alpha factor (0.00 through 1.00 - what you want to apply to the color)  <input id="af" name="af" /></li>
+  <li>cb = background color (usually white, or 255) <input id="cb" name="cb" /></li>
+  <li>ab = background alpha factor (usually 1.0) <input id="ab" name="ab" /></li>
+  <li>Can sometimes be simplified to cr = cf + cb x (1 - af) - havenâ€™t worked the math on 	why.</li>
+</ul>
+
+<p><button>Run</button></p>
+
+<h2 id="explanation">Explanation</h2>
+<p>Take the rgba value of your color to convert.
+Example: <code class="language-plaintext highlighter-rouge">rgba(229,34,55,0.4)</code></p>
+
+<ol>
+  <li>Take the first value, 229, and run it through the formula
+    <ul>
+      <li>0 x 0.4 + 229 x 1.0 x (1 - 0.4) = 244.6 <em>can round to 245</em></li>
+    </ul>
+  </li>
+  <li>Do this for each of the other values:
+    <ul>
+      <li>0 x 0.4 + 34 x 1.0 x (1 - 0.4) = 167</li>
+      <li>0 x 0.4 + 55 x 1.0 x (1 - 0.4) = 175</li>
+    </ul>
+  </li>
+  <li>Add these three to an rgb - <code class="language-plaintext highlighter-rouge">rgb(111,33,42)</code></li>
+</ol>
+
+<p>Examples:</p>
+<div style="height:100px; width:100px; background-color:rgba(229,34,55,0.4);text-align:center;">Original, with opacity</div>
+<div style="height:100px; width:100px; background-color:rgb(111,33,42);text-align:center;">New, no opacity</div>
+
+<ul>
+  <li><em>note - values changed here due to the dark (non-white) background</em></li>
+</ul>
+
+<p>Original foreground color  <input id="af" name="af" />
+Alpha factor to apply  <input id="af" name="af" />
+Background color (0 for black, 255 for white)  <input id="af" name="af" />
+background alpha (usually 1)  <input id="af" name="af" />
+<input type="button" onclick="function()" value="Run!" /></p>
+:ET

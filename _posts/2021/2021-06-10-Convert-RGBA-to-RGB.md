@@ -31,9 +31,15 @@ Example: `rgba(229,34,55,0.4)`
 2. Do this for each of the other values:
 	- 0 x 0.4 + 34 x 1.0 x (1 - 0.4) = 167
 	- 0 x 0.4 + 55 x 1.0 x (1 - 0.4) = 175
-3. Add these three to an rgb - `rgb(111,33,42)`
+3. Add these three to an rgb - `rgb(245,167,175)`
 
 Examples:
-<div style="height:100px; width:100px; background-color:rgba(229,34,55,0.4);text-align:center;">Original, with opacity</div><div style="height:100px; width:100px; background-color:rgb(111,33,42);text-align:center;">New, no opacity</div>
+<span style="height:100px; width:100px; background-color:rgba(229,34,55,0.4);text-align:center;">Original, with opacity</span> <span style="height:100px; width:100px; background-color:rgb(122,44,47);text-align:center;">New, no opacity</span>
 
 - *note - values changed here due to the dark (non-white) background*
+
+<input id="cf" name="cf"> Original foreground color <br>
+<input id="af" name="af"> Alpha factor to apply  <br>
+<input id="cb" name="cb"> Background color  <br>
+<input id="ab" name="ab"> background alpha (usually 1)  <br>
+<input type="button" onclick="function()" value="Run!">
