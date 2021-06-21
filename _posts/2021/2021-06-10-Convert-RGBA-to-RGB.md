@@ -34,7 +34,13 @@ Example: `rgba(229,34,55,0.4)`
 3. Add these three to an rgb - `rgb(245,167,175)`
 
 Examples:
-<span style="height:100px; width:100px; background-color:rgba(229,34,55,0.4);text-align:center;">Original, with opacity</span> <span style="height:100px; width:100px; background-color:rgb(122,44,47);text-align:center;">New, no opacity</span>
+
+<table>
+	<tr>
+	<td style="height:120px; width:120px; background-color:rgba(229,34,55,0.4);text-align:center;border-right:2px solid #000;">Original, with opacity</td>
+	<td style="height:120px; width:120px; background-color:rgb(122,44,53);text-align:center;">New, no opacity</td>
+	</tr>
+</table>
 
 - *note - values changed here due to the dark (non-white) background*
 

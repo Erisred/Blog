@@ -1,4 +1,4 @@
-I"`<p>I recently wanted to create a chart in excel that used colors that had opacity. Unfortunately, Excel only allows hex or RGB colors with no opacity for a cell fill. After some searching, I found the formula to convert an image with a defined opacity into a new color without.</p>
+I"ö<p>I recently wanted to create a chart in excel that used colors that had opacity. Unfortunately, Excel only allows hex or RGB colors with no opacity for a cell fill. After some searching, I found the formula to convert an image with a defined opacity into a new color without.</p>
 
 <h2 id="the-formula">The formula</h2>
 <p>cr = cf x af + cb x ab x (1 - af)</p>
@@ -32,18 +32,23 @@ Example: <code class="language-plaintext highlighter-rouge">rgba(229,34,55,0.4)<
   <li>Add these three to an rgb - <code class="language-plaintext highlighter-rouge">rgb(245,167,175)</code></li>
 </ol>
 
-<p>Examples:
-<span style="height:100px; width:100px; background-color:rgba(229,34,55,0.4);text-align:center;">Original, with opacity</span> <span style="height:100px; width:100px; background-color:rgb(122,44,47);text-align:center;">New, no opacity</span></p>
+<p>Examples:</p>
+<div style="height:100px; width:100px; background-color:rgba(229,34,55,0.4);text-align:center;">Original, with opacity</div>
+<div style="height:100px; width:100px; background-color:rgb(122,44,47);text-align:center;">New, no opacity</div>
 
 <ul>
   <li><em>note - values changed here due to the dark (non-white) background</em></li>
 </ul>
 
-<p><input id="cf" name="cf" /> Original foreground color <br />
-<input id="af" name="af" /> Alpha factor to apply  <br />
-<input id="cb" name="cb" /> Background color  <br />
-<input id="ab" name="ab" /> background alpha (usually 1)  <br />
-<input type="button" onclick="colorVal()" value="Run!" /></p>
+<hr />
 
-<div id="colorValueAnswer"></div>
+<h2 id="heres-a-calculator">Hereâ€™s a calculator!</h2>
+
+<p><input class="input" id="cf" name="cf" /> Original foreground color <br />
+<input class="input" id="af" name="af" /> Alpha factor to apply  <br />
+<input class="input" id="cb" name="cb" /> Background color  <br />
+<input class="input" id="ab" name="ab" /> background alpha (usually 1)  <br />
+<input type="button" class="btn btn-dark" onclick="colorVal()" value="Run!" /></p>
+
+<div id="colorValueAnswer">Value answer</div>
 :ET
