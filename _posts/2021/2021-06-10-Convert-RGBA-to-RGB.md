@@ -54,8 +54,8 @@ Example: `rgba(229,34,55,0.4)`
 
 <table>
 	<tr>
-	<td style="height:120px; width:120px; background-color:rgba(229,34,55,0.4);text-align:center;border-right:2px solid #000;">Original, with opacity</td>
-	<td style="height:120px; width:120px; background-color:rgb(122,44,53);text-align:center;">New, no opacity</td>
+	<td style="height:150px; width:150px; background-color:rgba(229,34,55,0.4);text-align:center;border-right:2px solid #000;">Original, with opacity</td>
+	<td style="height:150px; width:150px; background-color:rgb(122,44,53);text-align:center;">New, no opacity</td>
 	</tr>
 </table>
 

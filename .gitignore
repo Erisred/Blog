@@ -3,3 +3,16 @@ _site
 node_modules
 Gemfile.lock
 *.gem
+
+# Generated output.
+_site/
+
+# Added when running `jekyll new PATH` or serving in incremental mode.
+.jekyll-metadata
+
+.jekyll-cache/
+.sass-cache/
+
+# Bundle's config.
+.bundle/
+vendor/
