@@ -11,8 +11,26 @@ tags: css
 
 I recently wanted to create a chart in excel that used colors that had opacity. Unfortunately, Excel only allows hex or RGB colors with no opacity for a cell fill. After some searching, I found the formula to convert an image with a defined opacity into a new color without.
 
+---
+## The calculator
+I know this is what you're after, so I'll put it at the top.
+
+Enter the rgba values for the color you want to match:<br>
+<input class="input" id="rValMatch"> <input class="input" id="gValMatch"> <input class="input" id="bValMatch"> <input class="input" id="oValMatch"><br>
+Enter the rgba values for the background:<br>
+<input class="input" id="rValBg"> <input class="input" id="gValBg"> <input class="input" id="bValBg"> <input class="input" id="oValBg">
+
+<input type="button" class="btn btn-dark" onclick="newColorVal()" value="Run the calculator">
+
+The new value is: rgb(<span id="newR"></span>, <span id="newG"></span>, <span id="newB"></span>);
+
+---
+## What you need to know in advance
+1. The rgba values of the color to match
+2. The rgba values of the background
+
 ## The formula
-cr = cf x af + cb x ab x (1 - af)
+**cr = cf x af + cb x ab x (1 - af)**
 
 Where:
 - cr = the resulting color
@@ -20,7 +38,6 @@ Where:
 - af = foreground alpha factor (0.00 through 1.00 - what you want to apply to the color)
 - cb = background color (usually white, or 255)
 - ab = background alpha factor (usually 1.0)
-- Can sometimes be simplified to cr = cf + cb x (1 - af) - haven't worked the math on 	why.
 
 ## Explanation
 Take the rgba value of your color to convert.
@@ -33,7 +50,7 @@ Example: `rgba(229,34,55,0.4)`
 	- 0 x 0.4 + 55 x 1.0 x (1 - 0.4) = 175
 3. Add these three to an rgb - `rgb(245,167,175)`
 
-Examples:
+### Example using above colors
 
 <table>
 	<tr>
@@ -42,16 +59,4 @@ Examples:
 	</tr>
 </table>
 
-- *note - values changed here due to the dark (non-white) background*
-
----
-
-## Here's a calculator!
-
-<input class="input" id="cf" name="cf"> Original foreground color <br>
-<input class="input" id="af" name="af"> Alpha factor to apply  <br>
-<input class="input" id="cb" name="cb"> Background color  <br>
-<input class="input" id="ab" name="ab"> background alpha (usually 1)  <br>
-<input type="button" class="btn btn-dark" onclick="colorVal()" value="Run!">
-
-<div id="colorValueAnswer">Value answer</div>
+- *note - values changed in the actual site due to the dark (non-white) background*
