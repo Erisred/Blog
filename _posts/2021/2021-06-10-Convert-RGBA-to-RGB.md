@@ -11,20 +11,7 @@ tags: css
 
 I recently wanted to create a chart in excel that used colors that had opacity. Unfortunately, Excel only allows hex or RGB colors with no opacity for a cell fill. After some searching, I found the formula to convert an image with a defined opacity into a new color without.
 
----
-## The calculator
-I know this is what you're after, so I'll put it at the top.
-
-Enter the rgba values for the color you want to match:<br>
-<input class="input" id="rValMatch"> <input class="input" id="gValMatch"> <input class="input" id="bValMatch"> <input class="input" id="oValMatch"><br>
-Enter the rgba values for the background:<br>
-<input class="input" id="rValBg"> <input class="input" id="gValBg"> <input class="input" id="bValBg"> <input class="input" id="oValBg">
-
-<input type="button" class="btn btn-dark" onclick="newColorVal()" value="Run the calculator">
-
-The new value is: rgb(<span id="newR"></span>, <span id="newG"></span>, <span id="newB"></span>);
-
----
+Forget the explanation, [skip straight to the calculator](/Blog/web-design/2021/06/10/Calculator-from-alpha.html).
 ## What you need to know in advance
 1. The rgba values of the color to match
 2. The rgba values of the background
@@ -39,16 +26,39 @@ Where:
 - cb = background color (usually white, or 255)
 - ab = background alpha factor (usually 1.0)
 
-## Explanation
-Take the rgba value of your color to convert.
-Example: `rgba(229,34,55,0.4)`
+# Example
+Let's take this red color: `rgb(229,34,55)`
+<div style="height:100px; width:100px; background-color:rgb(229,34,55);"></div>
+
+Now, let's make it a little transparent, by adding an alpha factor of 0.4. `rgba(229,34,55,0.4)`
+<div style="height:100px; width:100px; background-color:rgba(229,34,55,0.4);"></div>
+
+We need to know the color of the background. Here, it's `#333333`, which translates to  `rgba(51,51,51,1.0)`
+
+So, the values for the first `r` value are as follows:
+- cf = 229
+- af = 0.4
+- cb = 51
+- ab = 1.0
+
+Plug it in to the formula (don't forget [PEMDAS](https://en.wikipedia.org/wiki/Order_of_operations#Mnemonics)!)
 
 1. Take the first value, 229, and run it through the formula
-	- 0 x 0.4 + 229 x 1.0 x (1 - 0.4) = 244.6 *can round to 245*
+	- 229 x 0.4 + 51 x 1.0 x (1 - 0.4) = 122.2 *round to 122*
 2. Do this for each of the other values:
-	- 0 x 0.4 + 34 x 1.0 x (1 - 0.4) = 167
-	- 0 x 0.4 + 55 x 1.0 x (1 - 0.4) = 175
-3. Add these three to an rgb - `rgb(245,167,175)`
+	- 34 x 0.4 + 51 x 1.0 x (1 - 0.4) = 44
+	- 55 x 0.4 + 51 x 1.0 x (1 - 0.4) = 53
+3. Add these three to an rgb - `rgb(122,44,53)`
+
+## The result
+
+<table>
+	<tr>
+	<td style="height:100px; width:250px; background-color:rgba(229,34,55,0.4);text-align:center;border-right:2px solid #000;">rgba(229,34,55,0.4)</td>
+	<td style="height:100px; width:250px; background-color:rgb(122,44,53);text-align:center;">rgb(122,44,53)</td>
+	</tr>
+</table>
+Can you tell the difference?
 
 ### Example using above colors
 
