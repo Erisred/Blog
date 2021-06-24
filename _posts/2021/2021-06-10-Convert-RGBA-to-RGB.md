@@ -11,7 +11,7 @@ tags: css
 
 I recently wanted to create a chart in excel that used colors that had opacity. Unfortunately, Excel only allows hex or RGB colors with no opacity for a cell fill. After some searching, I found the formula to convert an image with a defined opacity into a new color without.
 
-Forget the explanation, [skip straight to the calculator](/Blog/web-design/2021/06/10/Calculator-from-alpha.html).
+**Screw the explanation, [take me to the calculator](/Blog/web-design/2021/06/10/Calculator-from-alpha.html)!**
 ## What you need to know in advance
 1. The rgba values of the color to match
 2. The rgba values of the background
@@ -26,14 +26,14 @@ Where:
 - cb = background color (usually white, or 255)
 - ab = background alpha factor (usually 1.0)
 
-# Example
+## Example
 Let's take this red color: `rgb(229,34,55)`
 <div style="height:100px; width:100px; background-color:rgb(229,34,55);"></div>
 
-Now, let's make it a little transparent, by adding an alpha factor of 0.4. `rgba(229,34,55,0.4)`
+Now, let's pretend we need to match that red color when it has an alpha factor of 0.4. `rgba(229,34,55,0.4)`
 <div style="height:100px; width:100px; background-color:rgba(229,34,55,0.4);"></div>
 
-We need to know the color of the background. Here, it's `#333333`, which translates to  `rgba(51,51,51,1.0)`
+When using transparency, the background color shows through. A color with alpha less then 1.0 will look different depending on the background. Because of this, we need to know the color of that background. Here, it's `#333333`, which translates to  `rgba(51,51,51,1.0)`
 
 So, the values for the first `r` value are as follows:
 - cf = 229
@@ -46,11 +46,11 @@ Plug it in to the formula (don't forget [PEMDAS](https://en.wikipedia.org/wiki/O
 1. Take the first value, 229, and run it through the formula
 	- 229 x 0.4 + 51 x 1.0 x (1 - 0.4) = 122.2 *round to 122*
 2. Do this for each of the other values:
-	- 34 x 0.4 + 51 x 1.0 x (1 - 0.4) = 44
-	- 55 x 0.4 + 51 x 1.0 x (1 - 0.4) = 53
+	- `g` values - 34 x 0.4 + 51 x 1.0 x (1 - 0.4) = 44
+	- `b` values = 55 x 0.4 + 51 x 1.0 x (1 - 0.4) = 53
 3. Add these three to an rgb - `rgb(122,44,53)`
 
-## The result
+### The result
 
 <table>
 	<tr>
@@ -59,14 +59,3 @@ Plug it in to the formula (don't forget [PEMDAS](https://en.wikipedia.org/wiki/O
 	</tr>
 </table>
 Can you tell the difference?
-
-### Example using above colors
-
-<table>
-	<tr>
-	<td style="height:150px; width:150px; background-color:rgba(229,34,55,0.4);text-align:center;border-right:2px solid #000;">Original, with opacity</td>
-	<td style="height:150px; width:150px; background-color:rgb(122,44,53);text-align:center;">New, no opacity</td>
-	</tr>
-</table>
-
-- *note - values changed in the actual site due to the dark (non-white) background*
