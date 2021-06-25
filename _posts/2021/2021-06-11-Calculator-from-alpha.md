@@ -2,7 +2,7 @@
 layout: post
 title: "RGBA to RGB conversion calculator"
 subtitle: "Calculator to convert rgba to simle rgb"
-date: 2021-06-10 09:37:14 -0500
+date: 2021-06-11 11:53:25 -0500
 preview-img: '/img/posts/sunhide.jpg'
 published: true
 categories: ["web-design"]
