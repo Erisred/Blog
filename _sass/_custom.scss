@@ -14,7 +14,7 @@ a, h2.post-title {color:rgb(136,158,170);}*/
 header {color: $gray-500;}
 hr {background-color: $gray-600;}
 hr.red {background-color:#c63939;}
-.meta {font-size: 75%;color:#dddddd;} /* the posted by... blurb */
+.meta {font-size: 75%;color:$text-lighter;} /* the posted by... blurb */
 
 /* There's no top margin on headers. What, really? */
 /* I kept each separate in case someday I want different sizes to have different spacing */
@@ -45,7 +45,7 @@ pre.highlight {
 .highlighter-rouge {
     font-family: 'iA Writer Mono V', 'Courier New', Courier, monospace;
     font-size:85%;
-    background-color:#454545;
+    background-color:$bg-code;
     color:white;
     padding:1px 4px;
     border-radius:7px;
@@ -108,7 +108,7 @@ img.post-preview-img {
     margin: 1.0em 0em;
     padding-left: 1em;
     border-left: 1px solid $gray-600;
-    color: $gray-400;
+    color: $text-lighter;
 }
 
 
@@ -124,7 +124,7 @@ img.post-preview-img {
     top:20px;
     float:right;
 }
-header.postHeader {margin-top:75px;color:#dddddd;}
+header.postHeader {margin-top:75px;color:$text-primary;}
 .post-preview h3.post-subtitle {color:$text-primary;}
 
 .post-preview {background-color: transparent; border-top: 1px solid $gray-500;border-radius: 0;margin-top: 10px;}
@@ -187,11 +187,22 @@ p.post-meta {margin-bottom:0px;}
   font-size: 0.9em;
   padding: 0.1em 0.25em;
   background-color: #ddd;
-  border: 2px solid #8b8a8b;
+  border: 2px solid $background-darker;
   border-radius: 8px;
   width: 5em;
 }
 
-body {
-  font-family: "iA Writer Quattro V";
+h5, h6 {
+  font-variant: small-caps;
+  letter-spacing:0.25em;
+}
+h5 {
+  font-size: 1.35em;
+  font-variant:small-caps;
+  letter-spacing:0.2em;
+}
+h6 {
+  font-size: 1.15em;
+  font-variant:small-caps;
+  letter-spacing:0.18em;
 }

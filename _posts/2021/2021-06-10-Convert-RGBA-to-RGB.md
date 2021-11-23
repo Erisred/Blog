@@ -33,29 +33,30 @@ Let's take this red color: `rgb(229,34,55)`
 Now, let's pretend we need to match that red color when it has an alpha factor of 0.4. `rgba(229,34,55,0.4)`
 <div style="height:100px; width:100px; background-color:rgba(229,34,55,0.4);"></div>
 
-When using transparency, the background color shows through. A color with alpha less then 1.0 will look different depending on the background. Because of this, we need to know the color of that background. Here, it's `#333333`, which translates to  `rgba(51,51,51,1.0)`
+When using transparency, the background color shows through. A color with alpha less then 1.0 will look different depending on the background. Because of this, we need to know the color of that background. Here, it's `#E9ECEF`, which translates to  `rgba(233,236,239,1.0)`
 
 So, the values for the first `r` value are as follows:
 - cf = 229
 - af = 0.4
-- cb = 51
+- cb = 233
 - ab = 1.0
 
 Plug it in to the formula (don't forget [PEMDAS](https://en.wikipedia.org/wiki/Order_of_operations#Mnemonics)!)
 
 1. Take the first value, 229, and run it through the formula
-	- 229 x 0.4 + 51 x 1.0 x (1 - 0.4) = 122.2 *round to 122*
+	- 229 x 0.4 + 233 x 1.0 x (1 - 0.4) = 231.4 *round to 231*
 2. Do this for each of the other values:
-	- `g` values - 34 x 0.4 + 51 x 1.0 x (1 - 0.4) = 44
-	- `b` values = 55 x 0.4 + 51 x 1.0 x (1 - 0.4) = 53
-3. Add these three to an rgb - `rgb(122,44,53)`
+	- `g` values - 34 x 0.4 + 236 x 1.0 x (1 - 0.4) = 155
+	- `b` values = 55 x 0.4 + 239 x 1.0 x (1 - 0.4) = 165
+3. Add these three to an rgb - `rgb(231,155,165)`
 
 ### The result
 
 <table>
 	<tr>
 	<td style="height:100px; width:250px; background-color:rgba(229,34,55,0.4);text-align:center;border-right:2px solid #000;">rgba(229,34,55,0.4)</td>
-	<td style="height:100px; width:250px; background-color:rgb(122,44,53);text-align:center;">rgb(122,44,53)</td>
+	<td style="height:100px; width:250px; background-color:rgb(231,155,165);text-align:center;">rgb(122,44,53)</td>
 	</tr>
 </table>
-Can you tell the difference?
+Can you tell the difference?<br />
+<i>Note - if viewing in dark mode, this might not work, since the background is actually rgb(52,58,64)...</i>

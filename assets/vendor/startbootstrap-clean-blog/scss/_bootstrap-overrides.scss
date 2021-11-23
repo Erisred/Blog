@@ -5,8 +5,18 @@
   padding: 15px 25px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  border-radius: 0;
+  border-radius: $btn-border-radius;
   @include sans-serif-font;
+  background-color:$btn-background;
+  color:$btn-color;
+  border-color: $btn-border;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $btn-color-hover;
+    background-color: $btn-background-hover;
+    border: 1px solid $btn-border-hover;
+  }
 }
 
 .btn-primary {

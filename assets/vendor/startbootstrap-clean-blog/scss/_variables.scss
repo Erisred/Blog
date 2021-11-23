@@ -32,26 +32,44 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
-$text-accent:           rgb(217, 131, 40);
-$text-accent-secondary: rgba(217, 131, 40, 0.6);
-$background-primary:    #333333;
-$background-lighter:    #444444;
-$background-darker:     #000000;
-$text-primary:          #dddddd;
-$text-lighter:          #ffffff;
-$text-darker:           #aaaaaa;
+$text-accent:           $info;
+$text-accent-secondary: $primary;
+$text-primary:          $gray-800;
+$text-lighter:          $gray-700;
+$text-darker:           $black;
+$background-primary:    $gray-200;
+$background-lighter:    $white;
+$background-darker:     $gray-200;
 
-$text-accent:           rgb(217, 131, 40);
-$text-accent-secondary: rgba(217, 131, 40, 0.6);
-$text-primary:          #222222;
-$text-lighter:          #444444;
-$text-darker:           #000000;
-$background-primary:    #dddddd;
-$background-lighter:    #ffffff;
-$background-darker:     #aaaaaa;
+$btn-color:             $gray-100;
+$btn-background:        $gray-700;
+$btn-border:            $gray-800;
+$btn-color-hover:       $white;
+$btn-background-hover:  $gray-800;
+$btn-border-hover:      $gray-900;
+$btn-border-radius:     7px;
 
-$text-accent:$info;
-$text-accent-secondary:$primary;
+$bg-code:               $gray-600;
+
+/* Uncomment for dark mode 
+
+$background-primary:    $gray-800;
+$background-lighter:    $gray-700;
+$background-darker:     $gray-900;
+$text-primary:          $gray-200;
+$text-lighter:          $gray-100;
+$text-darker:           $gray-300;
+
+$btn-color:$gray-100;
+$btn-background:$gray-700;
+$btn-border:$gray-800;
+$btn-color-hover:$white;
+$btn-background-hover:$gray-800;
+$btn-border-hover:$gray-900;
+
+$bg-code:               $gray-700;
+
+/* End dark mode */
 
 /* Fonts */
 /* iA Writer Duo V */
