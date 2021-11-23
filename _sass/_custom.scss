@@ -2,9 +2,9 @@
 /* General style tweaks */
 /* ************************************************************************** */
 
-a, h2.post-title {color:#a5b6c0;}
-a, h2.post-title {color:#A3BCCB;}
-a:hover, h2.post-title:hover, a:active, a:focus {color:#889EAA;}
+a, h2.post-title {color:$text-accent;/*#a5b6c0;*/}
+a, h2.post-title {color:$text-accent;/*#A3BCCB;*/}
+a:hover, h2.post-title:hover, a:active, a:focus {color:$text-accent-secondary/*#889EAA;*/}
 /*a, h2.post-title {color:#D6923C;}*/
 /*a:hover, h2.post-title:hover, a:active, a:focus {color: #A46F2B;}*/
 p a:any-link {text-decoration: none;}
@@ -26,7 +26,7 @@ h5 {margin-top:20px;}
 h6 {margin-top:20px;}
 
 /* footnotes */
-.footnotes {margin-bottom:10px;font-size:75%; font-family: 'Courier New', Courier, monospace;padding-top: 10px;padding-bottom: 10px;background-color: $gray-800;}
+.footnotes {margin-bottom:10px;font-size:75%; font-family: 'iA Writer Mono V', 'Courier New', Courier, monospace;padding-top: 10px;padding-bottom: 10px;background-color: $gray-800;}
 .footnotes p {margin: 5px;}
 .footnotes:before {content:"Footnotes";}
 
@@ -35,7 +35,7 @@ pre.highlight {
     background-color: $gray-400;
     padding: 15px 10px;
     border-radius:8px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'iA Writer Mono V', 'Courier New', Courier, monospace;
     font-size:80%;
     white-space: pre-wrap;
     overflow-x: auto;
@@ -43,7 +43,7 @@ pre.highlight {
 }
 
 .highlighter-rouge {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'iA Writer Mono V', 'Courier New', Courier, monospace;
     font-size:85%;
     background-color:#454545;
     color:white;
@@ -102,7 +102,7 @@ img.post-preview-img {
 }
 
 .post-subtitle {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'iA Writer Mono V', 'Courier New', Courier, monospace;
     font-size: 0.8em;
     max-width: 350px;
     margin: 1.0em 0em;
@@ -135,7 +135,7 @@ p.post-meta {margin-bottom:0px;}
 /* Tags and categories */
 /* ************************************************************************** */
 
-.postCategories {font-size:80%; padding: 0px 4px; /*border:1px solid $gray-700; border-radius:10px;*/font-family: 'Courier New', Courier, monospace;}
+.postCategories {font-size:80%; padding: 0px 4px; /*border:1px solid $gray-700; border-radius:10px;*/font-family: 'iA Writer Mono V', 'Courier New', Courier, monospace;}
 .postTags {font-size:80%; padding: 0px 4px; /*border:1px solid $gray-700; border-radius:10px;*/font-family: 'Courier New', Courier, monospace;}
 .categoryline {float: right;}
 .tagline {}
@@ -190,4 +190,8 @@ p.post-meta {margin-bottom:0px;}
   border: 2px solid #8b8a8b;
   border-radius: 8px;
   width: 5em;
+}
+
+body {
+  font-family: "iA Writer Quattro V";
 }

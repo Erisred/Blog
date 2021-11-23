@@ -2,7 +2,7 @@
 body {
   font-size: 18px;/*22px;*/
   color: $text-primary;/*$gray-900;*/
-  @include serif-font;
+  @include sans-serif-font;
   background: $background-primary;
 }
 
@@ -76,3 +76,4 @@ img::-moz-selection {
   color: $white;
   background: transparent;
 }
+
