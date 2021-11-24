@@ -11,7 +11,7 @@ tags: css
 
 I recently wanted to create a chart in excel that used colors that had opacity. Unfortunately, Excel only allows hex or RGB colors with no opacity for a cell fill. After some searching, I found the formula to convert an image with a defined opacity into a new color without.
 
-**Screw the explanation, [take me to the calculator](/Blog/web-design/2021/06/10/Calculator-from-alpha.html)!**
+**Screw the explanation, [take me to the calculator](/Blog/web-design/2021/06/11/Calculator-from-alpha.html)!**
 ## What you need to know in advance
 1. The rgba values of the color to match
 2. The rgba values of the background
