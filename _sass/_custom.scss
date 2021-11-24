@@ -101,6 +101,12 @@ img.post-preview-img {
     top:6px;
 }
 
+@media (max-width: 576px) {
+  img.post-preview-img {
+    display: none;
+  }
+}
+
 .post-subtitle {
     font-family: 'iA Writer Mono V', 'Courier New', Courier, monospace;
     font-size: 0.8em;
