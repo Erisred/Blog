@@ -198,6 +198,11 @@ p.post-meta {margin-bottom:0px;}
   width: 5em;
 }
 
+p {margin:15px 0;}
+h1 {font-size: 2.0rem;}
+h2 {font-size: 1.75rem;}
+h3 {font-size: 1.5rem;}
+h4 {font-size: 1.25rem;}
 h5, h6 {
   font-variant: small-caps;
   letter-spacing:0.25em;
@@ -212,3 +217,10 @@ h6 {
   font-variant:small-caps;
   letter-spacing:0.18em;
 }
+
+/* testing link changes */
+a, h2.post-title {color:$text-primary;}
+p a:any-link {text-decoration: underline;}
+a:hover, h2.post-title:hover, a:active, a:focus {color:$text-primary; text-decoration: none;}
+p a:any-link:hover, p a:any-link:active, p a:any-link:focus, a:any-link:hover {text-decoration:none;}
+.post-preview a, a.nav-link {text-decoration:none;}

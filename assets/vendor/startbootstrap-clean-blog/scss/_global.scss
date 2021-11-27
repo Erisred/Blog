@@ -25,12 +25,17 @@ h6 {
 }
 
 a {
-  color: $text-accent;/*$gray-900;*/
+  color: $text-accent;
   @include transition-all;
   &:focus,
   &:hover {
-    color: $text-accent-secondary;/*$primary;*/
+    color: $text-accent-secondary;
   }
+}
+
+a {
+  color: $text-primary;
+  text-decoration: underline;
 }
 
 blockquote {
