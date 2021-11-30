@@ -30,25 +30,57 @@ h6 {margin-top:20px;}
 .footnotes p {margin: 5px;}
 .footnotes:before {content:"Footnotes";}
 
-/* code blocks */
+/* code blocks 
 pre.highlight {
-    background-color: $gray-400;
+    background-color: $bg-code;
     padding: 15px 10px;
-    border-radius:8px;
-    font-family: 'iA Writer Mono V', 'Courier New', Courier, monospace;
+    /*font-family: 'iA Writer Mono V', 'Courier New', Courier, monospace;*//*
     font-size:80%;
     white-space: pre-wrap;
     overflow-x: auto;
     tab-width: 4;
 }
 
+pre {
+  margin:0;
+}
+
 .highlighter-rouge {
-    font-family: 'iA Writer Mono V', 'Courier New', Courier, monospace;
+    /*font-family: 'iA Writer Mono V', 'Courier New', Courier, monospace;*//*
     font-size:85%;
     background-color:$bg-code;
-    color:white;
+    color:$foreground-code;
     padding:1px 4px;
-    border-radius:7px;
+    border-radius:17px;
+}*/
+
+/* New is below here */
+
+
+pre.highlight {
+  background-color: $bg-codeblock;
+  color: $color-codeblock;
+  padding: 1em 0em;
+  margin: 0;
+  border-radius: 0px 10px 10px 0px;
+  border-left: 2px solid $border-codeblock;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+pre.highlight::-webkit-scrollbar {
+  display: none;
+}
+
+code.highlighter-rouge {
+  color: $color-code;
+  background-color: $bg-code;
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+
+.language-plaintext pre, .language-html pre {
+  padding-left:2.0em;
 }
 
 /* ************************************************************************** */
@@ -223,4 +255,4 @@ a, h2.post-title {color:$text-primary;}
 p a:any-link {text-decoration: underline;}
 a:hover, h2.post-title:hover, a:active, a:focus {color:$text-primary; text-decoration: none;}
 p a:any-link:hover, p a:any-link:active, p a:any-link:focus, a:any-link:hover {text-decoration:none;}
-.post-preview a, a.nav-link {text-decoration:none;}
+.post-preview a, .navbar a {text-decoration:none;}

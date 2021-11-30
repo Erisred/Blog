@@ -19,6 +19,8 @@
   }
 }
 
+a.btn {text-decoration:none;}
+
 .btn-primary {
   background-color: $primary;
   border-color: $primary;
@@ -39,4 +41,16 @@
 .btn-sm {
   font-size: 12px;
   padding: 8px 12px;
+}
+
+.btn-brand {
+  background-color: $color-brand;
+  border-color: $color-brand;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    background-color: darken($color-brand, 7.5) !important;
+    border-color: darken($color-brand, 7.5) !important;
+  }
 }
