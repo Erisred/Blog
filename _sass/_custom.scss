@@ -26,7 +26,7 @@ h5 {margin-top:20px;}
 h6 {margin-top:20px;}
 
 /* footnotes */
-.footnotes {margin-bottom:10px;font-size:75%; font-family: 'iA Writer Mono V', 'Courier New', Courier, monospace;padding-top: 10px;padding-bottom: 10px;background-color: $gray-800;}
+.footnotes {margin-bottom:10px;font-size:75%; font-family: 'iA Writer Mono V', 'Courier New', Courier, monospace;padding-top: 2em;padding-bottom: 10px;border-top:1px solid $text-primary;}
 .footnotes p {margin: 5px;}
 .footnotes:before {content:"Footnotes";}
 
@@ -79,7 +79,7 @@ code.highlighter-rouge {
   border-radius: 5px;
 }
 
-.language-plaintext pre, .language-html pre {
+.language-plaintext pre, .language-html pre, .language-js pre {
   padding-left:2.0em;
 }
 
