@@ -3,7 +3,7 @@ layout: post
 title: "Toggle visibility"
 subtitle: "Toggle the visibility of a specified DIV using css and JS"
 date: 2021-02-24 14:16:31 -0500
-preview-img: '/img/posts/sunhide.jpg'
+background: '/img/posts/sunhide.jpg'
 published: true
 categories: ["web-design"]
 tags: css javascript
@@ -42,13 +42,13 @@ If you want the content to be hidden at first, add `style="display=none"` to the
 
 The result:
 ```
-<button class="btn btn-dark" onclick="toggle_visibility('sampleID');">View div by ID</button>
+<button class="btn btn-primary btn-sm" onclick="toggle_visibility('sampleID');">View div by ID</button>
 
 <div id="sampleID" style="display:none;">  
 This is hidden by default, then shown (as a block) when the toggle link/button is pressed.
 </div>
 ```
-<button class="btn btn-dark" onclick="toggle_visibility('sampleID');">View div by ID</button>
+<button class="btn btn-primary btn-sm" onclick="toggle_visibility('sampleID');">View div by ID</button>
 
 <div id="sampleID" style="display:none;">  
 This is hidden by default, then shown (as a block) when the toggle link/button is pressed.
