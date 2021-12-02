@@ -6,7 +6,7 @@ date: 2021-02-10 19:30:02 -0500
 preview-img: '/img/posts/default.jpg'
 published: true
 categories: setup
-tags: test pinned
+tags: test
 ---
 # I said I was done with this
 Now, I'm thinking about using this for documenting my use of plaintext. Inspired by another site.

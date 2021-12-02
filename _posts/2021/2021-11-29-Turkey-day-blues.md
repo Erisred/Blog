@@ -5,7 +5,7 @@ subtitle: "Headings, blockquotes, and typography"
 date: 2021-11-29 20:28:13 -0500
 preview-img: '/img/posts/sunhide.jpg'
 published: true
-categories: ["web-design"]
+categories: ["web-design", setup]
 tags: test
 ---
 # This is a test of typography

@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "I'm testing some blockquotes"
-subtitle: "Just blocks and quotes"
+subtitle: "Examples of my custom 'admonition' styled blockquotes"
 date: 2021-11-29 20:28:13 -0500
 preview-img: '/img/posts/sunhide.jpg'
 published: true
-categories: ["web-design"]
-tags: test
+categories: system
+tags: blockquotes
 ---
 # I need to test blockquotes and admonitions
 This page is mainly for myself. It should be able to be removed in due course.
