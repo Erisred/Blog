@@ -2,23 +2,30 @@
 layout: page
 title: Posts
 background: '/img/pages/default.jpg'
+imgcaption: Photo by <a href="https://unsplash.com/@glenncarstenspeters?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Glenn Carstens-Peters</a> on <a href="https://unsplash.com/s/photos/checklist?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 ---
 
 {% for post in paginator.posts %}
 
-<article class="post-preview">
-  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-    <h2 class="post-title">{{ post.title }}</h2>
-    {% if post.subtitle %}
-    <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-    {% else %}
-    <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-    {% endif %}
-  </a>
-  <p class="post-meta">Posted
-    {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
-  </p>
-</article>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-md-12 mx-auto">
+      <article class="post-preview">
+        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+          <h2 class="post-title">{{ post.title }}</h2>
+          {% if post.subtitle %}
+          <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+          {% else %}
+          <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+          {% endif %}
+        </a>
+        <p class="post-meta">Posted
+          {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
+        </p>
+      </article>
+    </div>
+  </div>
+</div>
 
 {% endfor %}
 
