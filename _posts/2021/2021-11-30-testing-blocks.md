@@ -6,7 +6,7 @@ date: 2021-11-29 20:28:13 -0500
 preview-img: '/img/posts/sunhide.jpg'
 published: true
 categories: system
-tags: blockquotes
+tags: blockquotes pinned
 ---
 # I need to test blockquotes and admonitions
 This page is mainly for myself. It should be able to be removed in due course.

@@ -1,0 +1,41 @@
+---
+layout: page
+title: "Pinned posts"
+background: '/img/pages/pinned2.jpg'
+imgcaptioninv: Photo by <a href="https://unsplash.com/@madalyncox?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Madalyn Cox</a> on <a href="https://unsplash.com/s/photos/bookmark?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+---
+<header class="postHeader">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <h1>Pinned posts</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-md-12 mx-auto">
+            <ul>
+                {% for post in site.tags.pinned %}
+                <article class="post-preview">
+                    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                      {% if post.preview-img %}
+                      <img class="post-preview-img" src="{{ post.preview-img | replace: '/img', 'img' }}">
+                      {% endif %}
+                      <h2 class="post-title">{{ post.title }}</h2>
+                      {% if post.subtitle %}
+                      <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+                      {% else %}
+                      <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+                      {% endif %}
+                    </a>
+                    <p class="post-meta">Posted on {{ post.date | date: '%B %d, %Y' }}         
+                    </p>
+                  </article>
+                {% endfor %}
+            </ul>                
+        </div>
+    </div>
+</div>

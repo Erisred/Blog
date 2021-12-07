@@ -6,7 +6,7 @@ date: 2021-11-29 20:28:13 -0500
 preview-img: '/img/posts/sunhide.jpg'
 published: true
 categories: ["web-design", setup]
-tags: test
+tags: test pinned
 ---
 # This is a test of typography
 First, I need to see what *italic text looks like* and then I need to **check out bold text**.
