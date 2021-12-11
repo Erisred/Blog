@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "_posts/2021/2021-06-10-Convert-RGBA-to-RGB.md",
+            "file": "_posts/2021/2021-12-07-Time tracking.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2021/2021-06-10-Convert-RGBA-to-RGB.md",
+                "file": "_posts/2021/2021-12-07-Time tracking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,8 @@
   },
   "active": "fda980a25a041520",
   "lastOpenFiles": [
+    "_posts/2021/2021-12-07-Time tracking.md",
+    "_posts/2021/2021-11-30-testing-blocks.md",
     "_posts/2021/2021-06-10-Convert-RGBA-to-RGB.md",
     "_posts/2021/2021-11-29-Turkey-day-blues.md",
     "_posts/2021/2021-06-11-Calculator-from-alpha.md",
@@ -95,8 +97,6 @@
     "_posts/2021/2021-02-24-Convert-RGBA-to-RGB.md",
     "_posts/2021/2021-02-24-toggle-visibility 1.md",
     "_posts/2020/2020-01-26-dinosaurs.md",
-    "screenshot.png",
-    "README.md",
-    "img/malitovinv.png"
+    "screenshot.png"
   ]
 }
